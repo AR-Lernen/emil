@@ -1,0 +1,2445 @@
+<section class="level1" id="s-2">
+<h1><span class="sk-nr">2</span> Bemessung für Querkraft</h1>
+<section class="level2" id="s-2-1">
+<h2><span class="sk-nr">2.1</span> Einführung</h2>
+<p>Neben der Normalkraft und den Biegemomenten müssen auch die weiteren
+Schnittkräfte (Querkräfte und Torsion) bei der Bemessung berücksichtigt
+bzw. nachgewiesen werden. Im Stahlbetonbau sind bei der Bemessung auf
+Querkraft und auch der Torsion wesentliche Besonderheiten zu beachten,
+die sich aufgrund des Materialverhaltens sehr von anderen Bauweisen,
+z.B. dem Stahlbau, unterscheiden.</p>
+<p>Wesentlich hierfür ist die sehr unterschiedliche Druck- und
+Zugfestigkeit des Betons. Diese unterschiedlichen Festigkeiten führen
+dazu, dass sich das Material Beton hochgradig nichtlinear verhält. Schon
+bei der Biegebemessung wurde klar, dass das Aufreißen des Betons unter
+Zug- und Biegebeanspruchung zu sehr unterschiedlichen Zuständen des
+tragenden Querschnitts und des Lastabtrags führt.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/cb29dd805398.webp"/></p>
+<p>Abbildung 2‑1: Schnittgrößen eines Balkenelementes</p>
+<p>Die Notwendigkeit einer Querkraftbemessung lässt sich am folgenden
+Beispiel verdeutlichen: Die Tragfähigkeit eines Balkens aus zwei
+übereinanderliegenden nicht schubgekoppelten Teilen ist erheblich
+geringer als die eines monolithischen Systems (Abbildung 2‑2). Zwischen
+den einzelnen Schichten sind Schubkräfte erforderlich, um die
+Kontinuität der Verformungen zu gewährleisten und um Druck- und Zugzone
+(aus der Biegebeanspruchung) zu koppeln. Hierdurch wird der innere
+Hebelarm erst möglich und damit die Biegetragfähigkeit des
+Gesamtsystems.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b2ba0c4139e8.webp"/></p>
+<p>Abbildung 2‑2: Schubübertragung und Kopplung in einem Biegebalken</p>
+<p>Entscheidend für die Bemessung jedes Trägers ist die Kenntnis der
+Schnittgrößenverläufe (Abbildung 2‑3). Beim Querkraftnachweis ist
+weiterhin zu beachten, dass die Stelle mit der maximalen Querkraft
+<em>max V</em><sub>Ed</sub> für die Bemessung oftmals nicht maßgebend
+ist (vgl. Abschnitt 2.4.1). Dieses wird nachfolgend bei der Anschauung
+der für den Querkraftabtrag verwendeten Modelle klar werden.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9f70a3d38356.webp"/></p>
+<p>Abbildung 2‑3: Schnittkräfte für unterschiedliche Balken und
+Rahmensysteme</p>
+<p>Bei den erforderlichen rechnerischen Nachweisen von Stabtragwerken
+ist es aus praktischen Gründen sinnvoll, die Bemessung getrennt für
+Biegemomente mit/ohne Längskräfte einerseits und Querkräfte und
+Torsionsmomente andererseits durchzuführen. Der gegenseitige Einfluss
+wird durch entsprechende Ansätze berücksichtigt. Im Folgenden werden
+lediglich die Querkräfte V<sub>z</sub> betrachtet (einachsig).</p>
+<p>Die Biegebemessung eines Balkens, welcher aus einzelnen Segmenten
+besteht (Segmentbrücke), genügt nicht, um die Tragfähigkeit
+sicherzustellen (Abbildung 2‑4).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c4f89db9d178.webp"/></p>
+<p>Abbildung 2‑4: Balken aus Segmenten ohne durchgehende Bewehrung</p>
+</section>
+<section class="level2" id="s-2-2">
+<h2><span class="sk-nr">2.2</span> Betonbalken im Zustand I (ungerissener Stahlbetonquerschnitt)</h2>
+<p>Bei der Biegebemessung wurden die unterschiedlichen Zustände I und II
+vor und nach der Rissbildung unterschieden. Die klassische Betrachtung
+der Spannungszustände im globalen Koordinatensystem eines Balkens unter
+Einzellast und unter einer Linienlast ist in der nachfolgenden Abbildung
+dargestellt.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/286ba233773d.webp"/></p>
+<p>Abbildung 2‑5: Hauptspannungen in einem Balken im Zustand I</p>
+<p>Aus den linear-elastischen Berechnungen lassen sich entsprechende
+Spannungszustände ableiten.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/5f4f3e26eafd.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/5f81a02e54d4.webp"/></p>
+<p>Abbildung 2‑6: Spannungen im Balken unter Linienlast und Zusammenhang
+von Hauptspannungen und Normal- und Schubspannungen im Zustand I</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b0d1dcc00ba2.webp"/></p>
+<p>Abbildung 2‑7: Spannungen an einem Balkenelement im Zustand I</p>
+<p>Für die Längsspannungen gilt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>=</mo><mspace width="0.222em"></mspace><mo>±</mo><mfrac><mi>M</mi><msub><mi>I</mi><mi>y</mi></msub></mfrac><mo>•</mo><msub><mi>z</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_{x} = \  \pm \frac{M}{I_{y}} \bullet z_{i}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑1)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mit der bekannten Beziehung für die Querkraft
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mrow><mo form="prefix" stretchy="true">(</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mfrac><msub><mi>d</mi><mi>M</mi></msub><msub><mi>d</mi><mi>x</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">V(x) = \frac{d_{M}}{d_{x}}</annotation></semantics></math>
+lässt sich die Gleichgewichtsbeziehung wie folgt formulieren:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><msub><mi>σ</mi><mi>x</mi></msub></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>∂</mi><mi>M</mi></mrow><mrow><mi>∂</mi><mi>x</mi><mo>•</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></mfrac><mo>•</mo><msub><mi>z</mi><mi>i</mi></msub><mo>=</mo><mfrac><mi>V</mi><msub><mi>I</mi><mi>y</mi></msub></mfrac><mo>•</mo><msub><mi>z</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\frac{\partial\sigma_{x}}{\partial x} = \frac{\partial M}{\partial x \bullet I_{y}} \bullet z_{i} = \frac{V}{I_{y}} \bullet z_{i}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑2)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><mo>•</mo><mrow><mo form="prefix" stretchy="true">(</mo><mi>τ</mi><mo>•</mo><mi>b</mi><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><mfrac><mi>V</mi><msub><mi>I</mi><mi>y</mi></msub></mfrac><mo>•</mo><msub><mi>z</mi><mi>i</mi></msub><mo>•</mo><mi>b</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\partial}{\partial z} \bullet (\tau \bullet b) + \frac{V}{I_{y}} \bullet z_{i} \bullet b = 0</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑3)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mspace width="0.222em"></mspace><mo>=</mo><mspace width="0.222em"></mspace><mo>−</mo><mfrac><mrow><mi>V</mi><mo>•</mo><mi>S</mi></mrow><mrow><msub><mi>I</mi><mi>y</mi></msub><mo>•</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tau\  = \  - \frac{V \bullet S}{I_{y} \bullet b}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑4)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: <em>V</em> = Querkraft</p>
+<p><em>I</em><sub>y</sub> = Trägheitsmoment um die y-Achse</p>
+<p><em>S</em> = statisches Moment des abgeschnittenen
+Querschnittsteils</p>
+<p><em>b</em> = Bauteilbreite im betrachteten Schnitt</p>
+<p>Für einen Rechteckquerschnitt (<em>b</em> = konstant) gilt:</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b22d5bf4a005.webp"/></p>
+<p>Abbildung 2‑8: Schubspannungen im Rechteckquerschnitt</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>max</mo><mi>τ</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>•</mo><mfrac><mi>V</mi><mrow><mi>b</mi><mo>•</mo><mi>h</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\max\tau = \frac{3}{2} \bullet \frac{V}{b \bullet h}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑5)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Es ist zu beachten, dass in einem Bauteil nur Hauptspannungen
+<em>σ</em><sub>I</sub> bzw. <em>σ</em><sub>II</sub> wirken (vgl.
+Abbildung 2‑6).</p>
+<p>Die Normalspannung <em>σ</em><sub>x</sub> bzw. <em>σ</em><sub>y</sub>
+und die Schubspannung <em>τ</em> sind lediglich Rechenhilfswerte, die
+das schiefe Hauptspannungssystem auf ein rechtwinkliges x-y System
+transformieren. <strong>Die Schubspannung ist somit keine
+Beanspruchung.</strong> Dieses gilt insbesondere für Stahlbetonbauteile,
+bei denen der Beton nur unwesentliche Zugspannungen übertragen kann.</p>
+<p>Entsprechend ergeben sich die Maximalwerte in Höhe der Schwerlinie
+für einen</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Kreis:</mtext><mspace width="1.0em"></mspace><mo>max</mo><mi>τ</mi><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⋅</mo><mfrac><mi>V</mi><mi>A</mi></mfrac><mo>=</mo><mn>0</mn><mo>,</mo><mn>425</mn><mo>⋅</mo><mfrac><mi>V</mi><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\text{Kreis:}\quad\max\tau = \frac{4}{3} \cdot \frac{V}{A} = 0,425 \cdot \frac{V}{r^{2}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑6)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">dünnen Kreisring:</mtext><mspace width="1.0em"></mspace><mo>max</mo><mi>τ</mi><mo>=</mo><mn>2</mn><mo>⋅</mo><mfrac><mi>V</mi><mi>A</mi></mfrac><mo>=</mo><mn>0</mn><mo>,</mo><mn>64</mn><mo>⋅</mo><mfrac><mi>V</mi><mrow><msubsup><mi>r</mi><mi>a</mi><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{dünnen Kreisring:}\quad\max\tau = 2 \cdot \frac{V}{A} = 0,64 \cdot \frac{V}{r_{a}^{2} - r_{i}^{2}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑7)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Allgemein gilt für die Spannungen:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Schubspannungen:</mtext><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mo>⋅</mo><mi>S</mi></mrow><mrow><mi>I</mi><mo>⋅</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{Schubspannungen:}\quad\tau = \frac{V \cdot S}{I \cdot b}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑8)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Biegespannungen:</mtext><mspace width="1.0em"></mspace><msub><mi>σ</mi><mi>x</mi></msub><mo>=</mo><mfrac><mi>N</mi><mi>A</mi></mfrac><mo>±</mo><mfrac><mi>M</mi><mi>I</mi></mfrac><mo>⋅</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">\text{Biegespannungen:}\quad\sigma_{x} = \frac{N}{A} \pm \frac{M}{I} \cdot z</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑9)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Hauptspannungen:</mtext><mspace width="1.0em"></mspace><msub><mi>σ</mi><mn>1</mn></msub><mo>=</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac><mo>+</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>τ</mi><mn>2</mn></msup></mrow></msqrt><mspace width="0.333em"></mspace><mo>;</mo><mspace width="1.0em"></mspace><msub><mi>σ</mi><mn>2</mn></msub><mo>=</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac><mo>−</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>τ</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\text{Hauptspannungen:}\quad\sigma_{1} = \frac{\sigma_{x}}{2} + \sqrt{\left( \frac{\sigma_{x}}{2} \right)^{2} + \tau^{2}}\mspace{6mu};\quad\sigma_{2} = \frac{\sigma_{x}}{2} - \sqrt{\left( \frac{\sigma_{x}}{2} \right)^{2} + \tau^{2}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑10)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mi>φ</mi><mo>=</mo><mfrac><mi>τ</mi><msub><mi>σ</mi><mn>1</mn></msub></mfrac><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mrow><mtext mathvariant="normal">für </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>σ</mi><mi>y</mi></msub><mo>=</mo><mn>0</mn><mo form="postfix" stretchy="true">)</mo></mrow><mspace width="1.0em"></mspace><mtext mathvariant="normal">bzw.</mtext><mspace width="1.0em"></mspace><mo>tan</mo><mn>2</mn><mi>φ</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>τ</mi></mrow><msub><mi>σ</mi><mi>x</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\tan\varphi = \frac{\tau}{\sigma_{1}}\ \left( \text{für }\sigma_{y} = 0 \right)\quad\text{bzw.}\quad\tan 2\varphi = \frac{2\tau}{\sigma_{x}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑11)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: φ = Winkel zwischen x-Achse und σ<sub>1</sub>; σ<sub>1</sub> =
+Haupt<strong>zug</strong>spannung; σ<sub>2</sub> =
+Haupt<strong>druck</strong>spannung. Allgemein gilt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>ξ</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>+</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>−</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><mn>2</mn></mfrac><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>s</mi><mn>2</mn><mi>φ</mi><mo>+</mo><msub><mi>τ</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>⋅</mo><mi>s</mi><mi>i</mi><mi>n</mi><mn>2</mn><mi>φ</mi></mrow><annotation encoding="application/x-tex">\sigma_{\xi} = \frac{\sigma_{x} + \sigma_{y}}{2} + \frac{\sigma_{x} - \sigma_{y}}{2} \cdot cos2\varphi + \tau_{xy} \cdot sin2\varphi</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑12)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>η</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>+</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><mn>2</mn></mfrac><mo>−</mo><mfrac><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>−</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><mn>2</mn></mfrac><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>s</mi><mn>2</mn><mi>φ</mi><mo>−</mo><msub><mi>τ</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>⋅</mo><mi>s</mi><mi>i</mi><mi>n</mi><mn>2</mn><mi>φ</mi></mrow><annotation encoding="application/x-tex">\sigma_{\eta} = \frac{\sigma_{x} + \sigma_{y}}{2} - \frac{\sigma_{x} - \sigma_{y}}{2} \cdot cos2\varphi - \tau_{xy} \cdot sin2\varphi</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑13)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mo>−</mo><mfrac><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>−</mo><msub><mi>σ</mi><mi>y</mi></msub></mrow><mn>2</mn></mfrac><mo>⋅</mo><mi>s</mi><mi>i</mi><mi>n</mi><mn>2</mn><mi>φ</mi><mo>+</mo><msub><mi>τ</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>s</mi><mn>2</mn><mi>φ</mi></mrow><annotation encoding="application/x-tex">\tau = - \frac{\sigma_{x} - \sigma_{y}}{2} \cdot sin2\varphi + \tau_{xy} \cdot cos2\varphi</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑14)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Dass die Schubspannung keine Beanspruchung ist,</strong>
+lässt sich an einem einachsig belasteten Zylinder veranschaulichen
+(Abbildung 2‑9). Transformiert man die Vertikalspannung in eine unter φ
+= 45° geneigte Ebene, so ergeben sich rechnerisch Schubspannungen im
+Schnitt, obwohl der Körper nur Normalspannungen aufweist:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>ξ</mi></msub><mo>=</mo><msub><mi>σ</mi><mi>η</mi></msub><mo>=</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac><mspace width="1.0em"></mspace><mtext mathvariant="normal">und</mtext><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><msub><mi>σ</mi><mi>x</mi></msub><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sigma_{\xi} = \sigma_{\eta} = \frac{\sigma_{x}}{2}\quad\text{und}\quad\tau = \frac{\sigma_{x}}{2}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑15)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/1d109c9c027d.webp"/></p>
+<p>Abbildung 2‑9: Mohr’scher Spannungskreis</p>
+<p>Es ist zu beachten, dass die Gleichungen dieses Kapitels von einem
+ebenen Dehnungs- und Spannungszustand ausgehen. Sie gelten daher
+beispielsweise nicht im Einleitungsbereich großer Einzellasten oder im
+Auflagerbereich, sogenannten Diskontinuitätsbereichen (siehe Kapitel 8).
+Den Verlauf der Membrankräfte in einem Einfeldbalken zeigt Abbildung
+2‑10.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/6cbd66e51632.webp"/></p>
+<p>Abbildung 2‑10: Verlauf der Membrankräfte (Spannung × Breite) in
+einem Einfeldbalken</p>
+</section>
+<section class="level2" id="s-2-3">
+<h2><span class="sk-nr">2.3</span> Betonbalken im Zustand II (gerissener Stahlbetonquerschnitt)</h2>
+<p>Alle vorhergehenden Betrachtungen zu den Spannungszuständen setzen
+ein isotropes elastisches Materialverhalten voraus. Im Stahlbetonbau
+ändert sich der Spannungsverlauf mit zunehmender Beanspruchung
+(zunehmendes Biegemoment bzw. Normalkraft) beim Überschreiten der
+Zugfestigkeit des Betons und dem Auftreten von Rissen. Der Übergang vom
+Zustand I zum Zustand II verändert den Spannungsverlauf erheblich, da
+die Risse eine ungehinderte Ausbreitung von Lasten verhindern.</p>
+<p>Bei Stahlbetontragwerken darf die vorhandene Betonzugfestigkeit für
+die Bemessung im Grenzzustand der Tragfähigkeit aus Sicherheitsgründen
+auch gar nicht angesetzt werden, weil sie verhältnismäßig klein ist und
+großen Streuungen unterliegt. Zudem beruht die Bemessung für Biegung im
+Grenzzustand der Tragfähigkeit explizit auf dem Zustand II und dem damit
+verbundenen inneren Hebelarm.</p>
+<p>Für den Nachweis der aufnehmbaren Querkraft greift man auf einfache
+Stabwerkmodelle zurück (kinematische Verfahren). Diese lassen sich auf
+die realen Versagensbilder bzw. Rissbilder bei realen Traglastversuchen
+zurückführen. Diese Modelle gelten ebenfalls im Zustand II.</p>
+<p>Für Stahlbeton- und Spannbetonkonstruktionen werden im Wesentlichen
+zwei Modelle verwendet:</p>
+<p>Bogen-Zugband-Modelle und/oder Fachwerkmodelle (siehe nachfolgende
+Kapitel)</p>
+<section class="level3" id="s-2-3-1">
+<h3><span class="sk-nr">2.3.1</span> Schubspannung für einen gerissenen Balken (Zustand II)</h3>
+<p>Die Biege- und Querkraftbemessung eines Stahlbetonbalkens erfolgt im
+Grenzzustand der Tragfähigkeit, d. h. im Allgemeinen im gerissenen
+Zustand. Biegerisse verlaufen senkrecht zur Stabachse, während
+Schubrisse eine Neigung von ca. 20° bis 70° aufweisen (Abbildung
+2‑11).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/59b16b2c4e44.webp"/></p>
+<p>Abbildung 2‑11: Schnittgrößen und Risse bei einem Einfeldbalken</p>
+<p>Zunächst wird vergleichbar mit dem vorherigen Abschnitt das
+Gleichgewicht an einem gerissenen Balkenelement in Höhe der Nulllinie
+betrachtet (Abbildung 2‑12).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/972d68f430e4.webp"/></p>
+<p>Abbildung 2‑12: Gleichgewichtsbetrachtung für einen Balken im Zustand
+II</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>−</mo><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>+</mo><mi>Δ</mi><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><msub><mi>τ</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>Δ</mi><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">F_{cd} - \left( F_{cd} + \Delta F_{cd} \right) + \tau_{Ed} \cdot b_{w} \cdot \Delta x = 0</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑16)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo><mspace width="1.0em"></mspace><msub><mi>τ</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><msub><mi>b</mi><mi>w</mi></msub></mfrac><mo>⋅</mo><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\Rightarrow \quad\tau_{Ed} = \frac{1}{b_{w}} \cdot \frac{\Delta F_{cd}}{\Delta x}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑17)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit b<sub>w</sub> = Breite des Querschnitts in der Zugzone – Steg
+(web)</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>=</mo><mfrac><mrow><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>−</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>z</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub></mrow><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">F_{cd} = F_{sd} = \frac{M_{Eds}}{z} = \frac{M_{Ed} - N_{Ed} \cdot z_{s1}}{z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑18)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit z = innerer Hebelarm (Abstand zwischen F<sub>s</sub> und
+F<sub>c</sub>) und z<sub>s1</sub> = Abstand der Zugbewehrung von der
+Schwerachse des Querschnitts. Für z ≈ konstant und N<sub>Ed</sub> ≈
+konstant sowie V<sub>Ed</sub> ≈ ΔM<sub>Ed</sub>/Δx folgt aus Gl.
+(2‑18):</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi><mo>⋅</mo><mi>z</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mi>Δ</mi><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>z</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi><mo>⋅</mo><mi>z</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi><mo>⋅</mo><mi>z</mi></mrow></mfrac><mo>−</mo><mn>0</mn><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{\Delta F_{cd}}{\Delta x} = \frac{\Delta M_{Ed}}{\Delta x \cdot z} - \frac{\Delta N_{Ed} \cdot z_{s1}}{\Delta x \cdot z} = \frac{\Delta M_{Ed}}{\Delta x \cdot z} - 0 = \frac{V_{Ed}}{z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑19)</td>
+</tr>
+</tbody>
+</table></div>
+<p>und damit (Gl. (2‑19) in Gl. (2‑17)):</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>τ</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\tau_{Ed} = \frac{V_{Ed}}{b_{w} \cdot z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑20)</td>
+</tr>
+</tbody>
+</table></div>
+<p>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+ist ein Maß für die Größe der Hauptzug- bzw. Hauptdruckspannung.) Die
+größte Schubspannung tritt nach diesem Modell im Querschnitt dort auf,
+wo die Breite b<sub>w</sub> zwischen Zugbewehrung und Dehnungsnulllinie
+am kleinsten ist (wichtig für die Bemessung).</p>
+<p>Dieses Rechenmodell setzt eine Zugfestigkeit des Materials zur
+Übertragung der Schubspannungen voraus. Diese darf jedoch, wie oben
+erläutert, im Grenzzustand der Tragfähigkeit nicht angesetzt werden.
+Demnach kann das obige Modell das Tragverhalten eines Stahlbetonbalkens
+im Zustand II nicht richtig abbilden. Trotz dieser Unstimmigkeiten wurde
+Gl. (2‑20) lange Zeit für die Querkraftbemessung verwendet (z. B. DIN
+1045, Ausgabe Juli 1988, gültig bis ins Jahr 2000).</p>
+</section>
+<section class="level3" id="s-2-3-2">
+<h3><span class="sk-nr">2.3.2</span> Bogen-Zugband-Modell</h3>
+<p>Im Traglastversuch von Balken ohne Querkraftbewehrung bzw.
+Bügelbewehrung beobachtet man, dass sich Biegerisse wie in Abbildung
+2‑13 entwickeln. Die Risse wachsen aus der Zugzone mit zunehmender
+Beanspruchung so lange in Richtung der Druckzone, bis sie in den
+überdrückten Bereich kommen. Hier wird ein weiteres Anwachsen durch die
+vorherrschenden Druckspannungen verhindert.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a94b19f3eed1.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/13f412c13032.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/5d515edc65af.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a8419589c0e2.webp"/></p>
+<p>Abbildung 2‑13: Bogen-Zugbandmodell und Sprengwerkmodell für Balken
+ohne Querkraftbewehrung</p>
+<p>Hieraus lässt sich erkennen, dass sich im Bauteil im Grenzzustand ein
+Druckbogen oder Sprengwerk ausbildet, der das globale Tragverhalten
+beschreibt und die aufgebrachten Lasten in Richtung der Auflager
+abträgt. Die Bogenwirkung entsteht durch das Kurzschließen der
+horizontalen Bogenkräfte („Bogenschub“) durch ein Zugband der
+Längsbewehrung. Voraussetzung hierfür ist die ausreichende Verankerung
+der Längsbewehrung im Auflagerbereich.</p>
+<p>Insbesondere bei Flächentragwerken (Platten, Scheiben, Schalen)
+möchte man auf die Anordnung von Querkraftbewehrung verzichten, da deren
+Einbau mit einem großen Aufwand verbunden ist. Daher sind für diese
+Bauteile Rechenmodelle notwendig, welche ohne den Ansatz einer
+Querkraftbewehrung auskommen. Dies ist für das Bogen-Zugband-Modell der
+Fall. Andererseits muss jedoch bei diesem Rechenansatz die Zugbewehrung
+bis zu den Auflagern ungeschwächt durchgeführt und dort verankert
+werden. Eine Staffelung der Biegebewehrung entsprechend der
+Momentenbeanspruchung ist somit nicht zulässig. Bei Balken ist im
+Gegensatz zu Platten immer eine Mindestquerkraftbewehrung
+vorzusehen.</p>
+</section>
+<section class="level3" id="s-2-3-3">
+<h3><span class="sk-nr">2.3.3</span> Fachwerkmodell</h3>
+<p>Beim Sprengwerk kann man natürlich ebenfalls von einem Stabwerk
+sprechen, dieses soll hier abgegrenzt werden gegenüber dem
+Fachwerkmodell mit Zugstreben. Bei einem Einfeldträger mit einer
+Einzellast in Feldmitte bilden sich zunächst Biegerisse im Bereich der
+größten Biegebeanspruchung (Abbildung 2‑14). Die Last breitet sich über
+Druckspannungen in den Träger aus.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ab794b853c7c.webp"/></p>
+<p>Abbildung 2‑14: Lastabtrag und Fachwerkmodell</p>
+<p>Das Fachwerkmodell bei der Querkraftbemessung geht davon aus, dass
+die Druckstreben jeweils durch Zugstreben wieder nach oben in die
+Druckzone des Balkens „hochgehängt“ werden.</p>
+<p>Dieses statisch bestimmte Fachwerkmodell wird für die Bemessung von
+Bauteilen mit Querkraftbewehrung verwendet. Die Zugkräfte werden der
+Bewehrung zugewiesen. Die Geometrie des Fachwerks liegt durch den
+Druckstrebenwinkel <em>θ</em> und den Winkel der Zugstreben
+(Querkraftbewehrung) <em>α</em> fest. Für Balken unter Linienlasten
+stellt sich das Tragverhalten bei Bauteilen mit Querkraftbewehrung
+analog dazu ein mit dem Unterschied, dass die Strebenkräfte (Zugkräfte
+in den Bügeln) in Richtung Auflager analog zum Querkraftverlauf
+zunehmen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c6c950d54305.webp"/></p>
+<p>Abbildung 2‑15: Fachwerkanalogie für einen Balken unter
+Linienlasten</p>
+<section class="level4">
+<h4>Modell mit Querkraftbewehrung</h4>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/1c46e8d61e68.webp"/></p>
+<p>Abbildung 2‑16: Balken unter Einzellasten mit Querkraftbewehrung aus
+vertikalen Bügeln</p>
+<p>Bei Bauteilversuchen an Balken mit Querkraftbewehrung in Form von
+Bügeln ergibt sich beispielsweise das Riss- bzw. Versagensbild in
+Abbildung 2‑16. Bei Überschreiten der Betonzugfestigkeit treten in der
+Regel zuerst im Mittelbereich Risse auf, die logischerweise senkrecht zu
+den Hauptzugspannungen, d.h. hier vertikal verlaufen müssen (Biegemoment
+maßgeblich). Diese Risse heißen Biegerisse, da sie aufgrund von Biegung
+entstehen (V ist zwischen den Einzellasten gleich 0, vgl. auch noch
+einmal Abbildung 2‑3). Ein Versagen in diesem Bereich erfolgt entweder
+als Biegedruck- (Betonversagen in der Druckzone) oder Biegezugbruch
+(Stahlversagen).</p>
+<p>Im Bereich zwischen Auflager und Einzellast weichen die Risse wegen
+höherer Querkraftbeanspruchung und abnehmendem Moment von der
+Senkrechten ab. Es bilden sich die für ein Querkraftversagen typischen
+Schrägrisse aus. Wenn die Biegebelastung nicht maßgebend für den Bruch
+ist, dann handelt es sich um ein Querkraftversagen. Dieses entsteht
+entweder durch Fließen der Querkraftbewehrung oder durch Versagen auf
+Druck, was letztlich zur Einschnürung der Biegedruckzone führt (siehe
+Abbildung 2‑17).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/55b76579726e.webp"/></p>
+<p>Abbildung 2‑17: Querkraftversagen</p>
+<p>Bei Balken unter Einzellasten kommt es selten zum Versagen im Bereich
+des Auflagers. Bei Balken unter Linienlasten liegt die größte Querkraft
+dagegen in der Nähe des Auflagers. Hier können plötzlich (meist ein eher
+sprödes Versagen) Schrägrisse entstehen, weil die Betonzugfestigkeit
+überschritten wird. Je nachdem, ob Stahl oder Beton versagt, handelt es
+sich um ein Versagen der Zugstreben (Fließen der Bügel) oder der
+Betondruckstreben.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/df30308854e8.webp"/></p>
+<p>Abbildung 2‑18: Stegversagen auf Querkraft</p>
+<p>Durch Analyse der Rissbilder hat Mörsch (E. Mörsch: Der Eisenbetonbau
+- Seine Theorie und Anwendung. Wittwer, Stuttgart, 1908) ein
+Fachwerkmodell zur Beschreibung des Kraftflusses im Zustand II
+entwickelt. Druck- und Zuggurt gewährleisten das Momentengleichgewicht
+der Biegebemessung (Abstand = innerer Hebelarm z), die vertikalen
+Zugstreben bilden die Querkraftbewehrung. Die diagonalen
+Druckstrebenkräfte werden vom Beton aufgenommen.</p>
+<p>Dieses Modell wurde weiterentwickelt in der Hinsicht, dass sowohl die
+Zugstreben flacher als 90° ausgeführt werden können (Schrägbügel oder
+Schrägaufbiegung der Längsbewehrung), als auch die Druckstreben in
+festgelegten Grenzen mit veränderlicher Neigung angenommen werden
+können.</p>
+<section class="level5" id="bestandteile-des-fachwerkmodells">
+<h5>Bestandteile des Fachwerkmodells</h5>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/09759ec3389a.webp"/>Diese so abgeleiteten
+Fachwerke (vgl. Abbildung 2‑19) setzen sich zusammen aus:</p>
+<p>Horizontale Betondruckstreben (entsprechend Biegemoment)</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">F_{cd} = \frac{M_{Eds}}{z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑21)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Horizontale Zugstreben</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><mspace width="0.222em"></mspace><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{sd} = \frac{M_{Eds}}{z} + \ N_{Ed}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑22)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Unter dem Winkel <em>θ</em> geneigte Betondruckstreben:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>c</mi><mi>w</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{cwd}</annotation></semantics></math></p>
+<p>Unter dem Winkel <em>α</em> geneigte Zugstreben:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>s</mi><mi>w</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{swd}</annotation></semantics></math></p>
+<p><em>(Index w = web [Steg] )</em></p>
+<p>mit:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mo>=</mo><mspace width="0.222em"></mspace><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>+</mo><mspace width="0.222em"></mspace><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>•</mo><mi>z</mi><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">M_{Eds} = \ M_{Ed} + \ N_{Ed} \bullet z\ </annotation></semantics></math>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">N_{Ed}</annotation></semantics></math>
+als Druckkraft positiv)</p>
+<p><em>z</em><sub>s1</sub> = Abstand der Zugbewehrung von der
+Schwerachse des ungerissenen Querschnitts</p>
+<p>Die Querkraftbemessung besteht aus dem Tragfähigkeitsnachweis dieser
+4 (Stab-) Kräfte. Die Zugkräfte <em>F</em><sub>sd</sub> und
+<em>F</em><sub>swd</sub> werden durch Bewehrung, vertikale Bügel (α =
+90°) oder Schrägaufbiegungen bzw. Schrägbügel (α &lt; 90°), aufgenommen
+(siehe konstruktive Durchbildung).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/bfdbd9f0a3da.webp"/></p>
+<p>Abbildung 2‑19: Fachwerkmodell für die Querkraftbemessung</p>
+<p>Bei der Anordnung der Querkraftbewehrung ist zu beachten, dass sie
+enger als nach dem Fachwerkmodell liegen muss, da sich sonst
+Querkraftrisse über den ganzen Querschnitt zwischen den Bügeln ausbilden
+können.</p>
+<p>Dieses führt dazu, dass die Strebenkraft der Querkraftbewehrung auf
+eine Längeneinheit bezogen wird (verschmiertes Fachwerk, Bügel pro lfd.
+Meter).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/2be0aa6472aa.webp"/></p>
+<p>Abbildung 2‑20: Fachwerkmodell mit rechnerischen Strebenkräften</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ee798a845a9b.webp"/></p>
+<p>Abbildung 2‑21: Fachwerkmodell mit 90° Querkraftbewehrung</p>
+</section>
+</section>
+<section class="level4">
+<h4>Kräfte und Spannungen beim Fachwerkmodell</h4>
+<p>Die Kräfte der Fachwerkstäbe werden für einen
+<strong>konstanten</strong> Verlauf der Querkraft ermittelt. Sie lassen
+sich durch Kraftzerlegung an jedem Fachwerkknoten bestimmen (Abbildung
+2‑21). Die so berechneten Strebenkräfte sind noch auf die Längeneinheit
+zu beziehen, da das betrachtete Fachwerk nur eines von vielen darstellt
+(verschmiertes Fachwerk, Spannungsfelder).</p>
+<p>Die aus dem Fachwerkmodell abgeleiteten Bemessungsgleichungen für
+V<sub>Rd,s</sub> und V<sub>Rd,max</sub> sind in Abschnitt 2.6.3
+zusammengestellt. Die erforderliche Menge der Querkraftbewehrung
+A<sub>sw</sub>/s nimmt bei einem Druckstrebenwinkel von θ = 45° bis zu
+einem Neigungswinkel der Querkraftbewehrung von α = 45° ab und
+anschließend wieder zu. V<sub>Rd,max</sub> nimmt mit größer werdendem
+Winkel α stark ab (Abbildung 2‑22). Bei Schrägaufbiegungen ist somit
+eine geringere Bewehrungsmenge erforderlich. Trotzdem werden heute aus
+konstruktiven Gründen im Allgemeinen Bügel (d. h. α = 90°)
+angeordnet.</p>
+<p>Winkelfunktionen: sin 45° = 1/√2; cot 45° = 1 (cot 30° = 1,73; cot
+60° = 0,58)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/fd571cd52756.webp"/></p>
+<p>Abbildung 2‑22: Statisch erforderliche Querkraftbewehrung und
+Druckstrebentragfähigkeit in Abhängigkeit von der Neigung der
+Querkraftbewehrung α (Druckstrebenwinkel θ = 45°)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/0036174fa767.webp"/></p>
+<p>Abbildung 2‑23: Fachwerkmodell für Strebenwinkel θ ≠ 45° für geneigte
+Querkraftbewehrung und Bügel (α = 90°)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/69cec70598ef.webp"/></p>
+<p>Abbildung 2‑24: „Verschmiertes“ Fachwerkmodell (Spannungsfeld) sowie
+Schnitte zur Herleitung der Bemessungsgleichungen</p>
+<p>Tabelle 2‑1: Vergleich zweier Fachwerkmodelle mit α = 45° bzw. 90° (θ
+= 45°)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/4c957b4e5bfc.webp"/></p>
+<p>In</p>
+<p>Tabelle 2‑1 werden die Kräfte und Spannungen für zwei
+unterschiedliche Neigungen der Querkraftbewehrung, α = 45°
+(Aufbiegungen) und 90° (Bügel), miteinander verglichen, wobei die
+Neigung der Druckstreben zu θ = 45° angesetzt wird. Wie man sieht, ist
+die Spannung in der Querkraftbewehrung bei Aufbiegungen um den Faktor
+1/√2 = 0,71 geringer als bei Bügeln.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/35707078e229.webp"/></p>
+<p>Abbildung 2‑25: Einfluss der Neigung der Querkraftbewehrung für
+σ<sub>cd</sub> = 0 MPa</p>
+<p>Bislang wurden nur Balken betrachtet, bei welchen die Einwirkung an
+der Trägeroberseite angreift. Der Lastangriff – oben oder unten
+angehängt – beeinflusst die Kräfte in dem Ersatzfachwerk (Abbildung
+2‑26).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b4a15058d327.webp"/></p>
+<p>Abbildung 2‑26: Verlauf der Kräfte im Zug- bzw. Druckgurt bei
+unterschiedlicher Lasteinleitung</p>
+</section>
+</section>
+<section class="level3" id="s-2-3-4">
+<h3><span class="sk-nr">2.3.4</span> Versatzmaß</h3>
+<p>Wie bereits bei der Betrachtung des Fachwerkmodells gezeigt
+(Abbildung 2‑20), ergibt sich bei der Bemessung der Zugstreben für die
+Querkraft ein Versatz der Zugkraft im Untergurt um das Versatzmaß
+<em>a</em><sub>l</sub>. Durch das Absetzen der geneigten Druckstreben
+auf der Hauptlängsbewehrung kommt es zu einer Erhöhung der Zugkraft
+durch den Horizontalanteil der Druckstrebenkraft. Dadurch wird die
+Zugkraft <em>F</em><sub>s</sub> infolge der Querkraftbeanspruchung um
+Δ<em>F</em><sub>td</sub> = <em>V</em><sub>Ed</sub>∙<em>a</em><sub>l</sub>
+/<em>z</em> größer als bei reiner Biegung, die Druckkraft entsprechend
+kleiner.</p>
+<p>Dies widerspricht dem Modell für die Biegebemessung, bei dem die max.
+Zugkraft im Zuggurt exakt an der Stelle des max. Momentes auftritt
+(Abbildung 2‑20).</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mo>cot</mo><mi>α</mi></mrow><mn>2</mn></mfrac><mo>=</mo><mn>0</mn><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mo>cot</mo><mi>α</mi></mrow><mn>2</mn></mfrac><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><msub><mi>a</mi><mi>l</mi></msub><mi>z</mi></mfrac><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">F_{sd,A} = \frac{M_{Eds}}{z} + V_{Ed}⋅\frac{\cot\theta - \cot\alpha}{2} = 0 + V_{Ed}⋅\frac{\cot\theta - \cot\alpha}{2} = V_{Ed}⋅\frac{a_{l}}{z}\ </annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑23)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>z</mi><mi>w</mi><mi>.</mi><mo>:</mo><mspace width="0.222em"></mspace><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">|</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">|</mo></mrow><mo>⋅</mo><mfrac><msub><mi>a</mi><mi>l</mi></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≥</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">bzw.:\ F_{sd,A} = \left| V_{Ed} \right|⋅\frac{a_{l}}{z} + N_{Ed} \geq 0,5⋅V_{Ed}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 9.3DE)<br/>(2‑24)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Für den Ansatz des Hebelarms der inneren Kräfte z gelten folgende
+Regeln:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>- Im Allgemeinen kann näherungsweise
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mspace width="0.222em"></mspace><mo>=</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mn>9</mn><mo>⋅</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">z\  = \ 0,9⋅d</annotation></semantics></math>
+angesetzt werden.</td>
+<td class="sk-glnr">(2‑25)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>- Eine Obergrenze für <em>z</em> ergibt sich aus der folgenden
+Bedingung:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>Innerer Hebelarm <em>z</em> ≈ 0,9∙<em>d</em> aber:</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mspace width="0.222em"></mspace><mo>=</mo><mo>max</mo><mrow><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">{</mo><mi>d</mi><mspace width="0.222em"></mspace><mo>−</mo><mspace width="0.222em"></mspace><msub><mi>c</mi><mrow><mi>v</mi><mi>.</mi><mi>l</mi></mrow></msub><mspace width="0.222em"></mspace><mo>−</mo><mspace width="0.222em"></mspace><mn>30</mn><mspace width="0.222em"></mspace><mi>m</mi><mi>m</mi><mspace width="0.222em"></mspace><mo>;</mo><mspace width="0.222em"></mspace><mi>d</mi><mspace width="0.222em"></mspace><mo>−</mo><mspace width="0.222em"></mspace><mn>2</mn><msub><mi>c</mi><mrow><mi>v</mi><mo>,</mo><mi>l</mi></mrow></msub><mo form="postfix" stretchy="true">}</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">z\  = \max{\ \left\{ d\  - \ c_{v.l}\  - \ 30\ mm\ ;\ d\  - \ 2c_{v,l} \right\}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑26)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>c</em><sub>v,l</sub> = Verlegemaß der Längsbewehrung in der
+Betondruckzone</p>
+<p>Trägt man die Kräfte der horizontalen Druck- und Zugstrebe
+(F<sub>cd</sub> bzw. F<sub>sd</sub>) des Fachwerkmodells auf, so erkennt
+man, dass die Stahlzugkräfte F<sub>sd</sub> größer sind, als sich aus
+der reinen Biegung (F<sub>sd</sub> = –F<sub>cd</sub> =
+M<sub>Eds</sub>/z) ergeben würde. Die Druckkraft F<sub>cd</sub> ist
+geringer. Dies gilt nur für eine Belastung von oben auf den Balken. Die
+Kraftzunahme infolge der Querkraftbeanspruchung muss bei der Bemessung
+berücksichtigt werden (Abbildung 2‑27). Allgemein gilt für einen
+Balken:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>=</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mo>+</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub></mrow><mrow><mi>Δ</mi><mi>x</mi></mrow></mfrac><mo>⋅</mo><mi>Δ</mi><mi>x</mi><mo>=</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">M_{Ed,c} = M_{Ed,c'} + \frac{\Delta M_{Ed,c'}}{\Delta x} \cdot \Delta x = M_{Ed,c'} + V_{Ed,c'} \cdot z \cdot cot\theta</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑27)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Gleichgewichtsbedingung ΣM = 0 um den Punkt C:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>M</mi><mi>c</mi></msub><mo>=</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mo>−</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mo>cos</mo><mi>α</mi><mo>⋅</mo><mfrac><mrow><mi>z</mi><mi>′</mi></mrow><mn>2</mn></mfrac><mo>+</mo><mi>s</mi><mi>i</mi><mi>n</mi><mi>α</mi><mo>⋅</mo><mi>z</mi><mi>′</mi><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi></mrow><mn>2</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>−</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum M_{c} = M_{Ed,c'} + V_{Ed} \cdot z \cdot cot\theta - F_{swd} \cdot \left( \cos\alpha \cdot \frac{z'}{2} + sin\alpha \cdot z' \cdot \frac{\cot\theta}{2} \right) - F_{sd,eff} \cdot z = 0</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑28)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit F<sub>swd</sub> = V<sub>Ed</sub>/sin α ergibt sich:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>M</mi><mi>c</mi></msub><mo>=</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>−</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi><mo>−</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mo form="postfix" stretchy="true">)</mo></mrow><mo>−</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum M_{c} = M_{Ed,c'} + V_{Ed} \cdot z \cdot \left( \cot\theta - 0,5 \cdot cot\alpha - 0,5 \cdot cot\theta \right) - F_{sd,eff} \cdot z = 0</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑29)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo><mspace width="1.0em"></mspace><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>′</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\Rightarrow \quad F_{sd,eff} = \frac{M_{Ed,c'}}{z} + V_{Ed} \cdot \frac{\cot\theta - cot\alpha}{2}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑30)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/bd84885f0b90.webp"/></p>
+<p>Abbildung 2‑27: Zugkräfte mit und ohne Berücksichtigung des
+Querkrafteinflusses</p>
+<p>Gl. (2‑30) wird in Rechenprogrammen verwendet, bei welchen in vielen
+Querschnitten die Nachweise automatisch geführt werden. Bei der
+Handrechnung hat sich eine andere Vorgehensweise als zweckmäßig
+erwiesen. Hier wird die Zugkraftlinie (F<sub>sd</sub> =
+M<sub>Eds</sub>/z) um einen gewissen Betrag, dem sogenannten Versatzmaß
+a<sub>l</sub>, so verschoben, dass die zusätzlichen Zuggurtkräfte
+abgedeckt werden (Abbildung 2‑28).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/f60ae35d4417.webp"/></p>
+<p>Abbildung 2‑28: Verschiebung der Zugkraftlinie um das Versatzmaß
+a<sub>l</sub></p>
+<p>Die Neigung der Zugkraftlinie in einem beliebigen Punkt folgt aus
+V<sub>Ed</sub> = dM<sub>Ed</sub>/dx = dF<sub>sd</sub>·z/dx. Das
+Versatzmaß a<sub>l</sub> gibt an, um welche Länge die Zugkraftlinie in
+horizontaler Richtung verschoben werden muss, damit die zusätzliche
+Beanspruchung aus der Querkraft abgedeckt ist. Aus geometrischen
+Betrachtungen folgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>M</mi><mo>+</mo><mi>V</mi></mrow></msub></mrow><msub><mi>a</mi><mi>l</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub></mrow><mrow><mi>z</mi><mo>⋅</mo><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mi>z</mi></mfrac><mspace width="1.0em"></mspace><mtext mathvariant="normal">bzw.</mtext><mspace width="1.0em"></mspace><msub><mi>a</mi><mi>l</mi></msub><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>M</mi><mo>+</mo><mi>V</mi></mrow></msub><mo>⋅</mo><mi>z</mi></mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{\Delta F_{sd,M + V}}{a_{l}} = \frac{\Delta M_{Eds}}{z \cdot dx} = \frac{V_{Ed}}{z}\quad\text{bzw.}\quad a_{l} = \frac{\Delta F_{sd,M + V} \cdot z}{V_{Ed}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑31)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>M</mi><mo>+</mo><mi>V</mi></mrow></msub><mo>−</mo><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>M</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi></mrow><mn>2</mn></mfrac><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><msub><mi>a</mi><mi>l</mi></msub><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">\Delta F_{sd} = F_{sd,M + V} - F_{sd,M} = V_{Ed} \cdot \frac{\cot\theta - cot\alpha}{2} = V_{Ed} \cdot \frac{a_{l}}{z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑32)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>l</mi></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">a_{l} = 0,5 \cdot z \cdot \left( \cot\theta - cot\alpha \right)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 9.2)<br/>(2‑33)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Beachte:</strong> Für Platten gilt ein Versatzmaß von
+a<sub>l</sub> = d. Das Versatzmaß ist nur bei Bauteilen
+<strong>mit</strong> Querkraftbewehrung anzusetzen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/618e02a0001a.webp"/></p>
+<p>Abbildung 2‑29: Versatzmaß (cot θ – cot α) = a<sub>l</sub>/(z/2) in
+Abhängigkeit vom Druckstrebenwinkel θ für α = 90°</p>
+</section>
+<section class="level3" id="s-2-3-5">
+<h3><span class="sk-nr">2.3.5</span> Verankerung der Feldbewehrung an einem Endauflager</h3>
+<p>Nach dem Fachwerkmodell ist auch am Endauflager (M = 0) eine Zugkraft
+in der Längsbewehrung vorhanden. Sie beträgt nach Gl. (2‑30) mit
+M<sub>Ed</sub> = 0:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi></mrow><mn>2</mn></mfrac><mo>=</mo><mn>0</mn><mo>+</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>−</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>α</mi></mrow><mn>2</mn></mfrac><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><msub><mi>a</mi><mi>l</mi></msub><mi>z</mi></mfrac></mrow><annotation encoding="application/x-tex">F_{sd,A} = \frac{M_{Eds}}{z} + V_{Ed} \cdot \frac{\cot\theta - cot\alpha}{2} = 0 + V_{Ed} \cdot \frac{\cot\theta - cot\alpha}{2} = V_{Ed} \cdot \frac{a_{l}}{z}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑34)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">|</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">|</mo></mrow><mo>⋅</mo><mfrac><msub><mi>a</mi><mi>l</mi></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≥</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{sd,A} = \left| V_{Ed} \right| \cdot \frac{a_{l}}{z} + N_{Ed} \geq 0,5 \cdot V_{Ed}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 9.3DE)<br/>(2‑35)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Verankerung dieser Zugkraft am Endauflager wird in Abschnitt 6.7
+(Verankerung von Betonstäben) behandelt.</p>
+</section>
+<section class="level3" id="s-2-3-6">
+<h3><span class="sk-nr">2.3.6</span> Vergleich zwischen Modell und Versuch</h3>
+<p>Nach dem Fachwerkmodell ist die Spannung in der Querkraftbewehrung
+proportional zur einwirkenden Querkraft. Dem widersprechen
+Versuchsergebnisse (Abbildung 2‑30, Abbildung 2‑31). Im Versuch ergeben
+sich geringere Beanspruchungen in der Querkraftbewehrung. Dies ist auf
+die Vernachlässigung verschiedener Kraftanteile zurückzuführen. Unter
+anderem handelt es sich um (Abbildung 2‑32):</p>
+<ul>
+<li><p>V<sub>c</sub>: vertikale Komponente der Betondruckzone</p></li>
+<li><p>V<sub>cr</sub>: vertikale Komponente der
+Rissverzahnungskräfte</p></li>
+<li><p>V<sub>Dü</sub>: vertikale Komponente der Dübelwirkung der
+Längsbewehrung</p></li>
+</ul>
+<p>Die obigen Kraftanteile lassen sich theoretisch nicht bestimmen. Aus
+Sicherheitsgründen werden sie daher für Bauteile mit Querkraftbewehrung
+vernachlässigt.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/746aee3940a8.webp"/></p>
+<p>Abbildung 2‑30: Vergleich der Bügelspannungen nach dem Modell von
+Mörsch und im Versuch</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/541585d3c9f4.webp"/></p>
+<p>Abbildung 2‑31: Mittlere Bügelspannungen in Balken mit verschiedenen
+Verhältnissen b<sub>o</sub>/b<sub>w</sub> (alle anderen Abmessungen
+einschl. der Querkraftbewehrung gleich), aus Leonhardt: Vorlesungen über
+Massivbau, Teil 1</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9951f03e246d.webp"/></p>
+<p>Abbildung 2‑32: Komponenten der Querkraftabtragung</p>
+<p>Es sei auch noch darauf hingewiesen, dass sich das Fachwerkmodell
+erst im Bruchzustand einstellt. Dies setzt einen gerissenen Querschnitt
+voraus.</p>
+</section>
+</section>
+<section class="level2" id="s-2-4">
+<h2><span class="sk-nr">2.4</span> Ermittlung der Bemessungsquerkraft</h2>
+<section class="level3" id="s-2-4-1">
+<h3><span class="sk-nr">2.4.1</span> Maßgebender Schnitt – Stützungsart</h3>
+<p>Bevor eine Querkraftbemessung durchgeführt werden kann, müssen die
+rechnerisch anzusetzenden Querkräfte <em>V</em><sub>Ed</sub> bekannt
+sein. Der Querkraftnachweis wird in der Regel nicht mit dem Maximalwert
+<em>V</em><sub>Ed,max</sub> durchgeführt, da nach dem Fachwerkmodell im
+Auflagerbereich die Querkräfte über Druckstreben abgetragen werden, die
+direkt ins Auflager geführt werden und dann direkt vor dem Auflager
+nicht wieder hochgehängt werden müssen.</p>
+<p>Aus diesem Grund wird der Nachweis am direkten Auflager im Abstand
+1,0<em>d</em> geführt. Dieses ergibt sich aus dem 45°
+Fachwerkmodell.</p>
+<p><strong><u>Direkte Stützung:</u></strong> Die vertikale Komponente
+der Druckstrebenkraft <em>F</em><sub>cwd</sub> am Auflager wird direkt
+in die Auflagerkonstruktion eingeleitet</p>
+<p>Anders sieht es bei einem indirekten Auflager aus.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c3f8e42af82d.webp"/></p>
+<p><strong><u>Indirekte Stützung:</u></strong> Die vertikale Komponente
+der Druckstrebenkraft aus dem gestützten Bauteil (Nebenträger) wird in
+das lastabtragende stützende Bauteil (Hauptträger) eingeleitet. Da eine
+Auflagerpressung fehlt, ist die gesamte Auflagerkraft nach oben zu
+hängen (Fachwerkmodell).</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a50c9cc268d2.webp"/></p>
+<p>Für direkte Lagerung muss gelten:</p>
+</blockquote></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>h</mi><mn>1</mn></msub><mo>−</mo><msub><mi>h</mi><mn>2</mn></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>≥</mo><msub><mi>h</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\left( h_{1} - h_{2} \right) \geq h_{2}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑36)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Abbildung 2‑33: Definition indirekte/direkte Auflagerung</p>
+<p>Maßgebende Querkraft im Auflagerbereich bei gleichförmiger
+Beanspruchung</p>
+<ul>
+<li><p>direkte Lagerung: <em>V</em><sub>Ed</sub> im Abstand
+1,0<em>d</em> vom Auflagerrand bei <em>V</em><sub>Rd,c</sub> und
+<em>V</em><sub>Rd,s</sub></p></li>
+</ul>
+<blockquote>
+<p><em>V</em><sub>Ed</sub> am Auflagerrand bei
+<em>V</em><sub>Rd,max</sub> Nachweis der Druckstrebe selbst</p>
+</blockquote>
+<ul>
+<li><p>indirekte Lagerung: <em>V</em><sub>Ed</sub> in der
+Auflagerachse</p></li>
+</ul>
+<p>Weitere Erläuterungen zur Bemessung und zur konstruktiven
+Durchbildung siehe Abschnitt 2.7.</p>
+</section>
+<section class="level3" id="s-2-4-2">
+<h3><span class="sk-nr">2.4.2</span> Bemessungsquerkraft bei gevouteten Trägern</h3>
+<p>Bei Trägern mit geneigter Ober- oder Unterseite kann die
+Vertikalkomponente der Betondruckkraft V<sub>ccd</sub> bzw. der
+Bewehrung V<sub>td</sub> zu einer Erhöhung oder Reduzierung des
+Querkraftwiderstandes V<sub>Rd</sub> führen. Bei Bauteilen mit
+konstanter Höhe gilt V<sub>Rd</sub> = V<sub>Rd,s</sub>, bei Bauteilen
+mit veränderlicher Höhe:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>c</mi><mi>c</mi><mi>d</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>p</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_{Rd} = V_{Rd,s} + V_{ccd} + V_{td} + V_{pd}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑37)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit:</p>
+<ul>
+<li><p>V<sub>Rd</sub>: Querkraftwiderstand mit Berücksichtigung der
+Voute</p></li>
+<li><p>V<sub>Rd,s</sub>: durch die Fließgrenze der Querkraftbewehrung
+begrenzter Querkraftwiderstand</p></li>
+<li><p>V<sub>ccd</sub>: Querkraftkomponente in der Druckzone bei
+geneigtem Druckgurt</p></li>
+<li><p>V<sub>td</sub>: Querkraftkomponente in der Zugbewehrung bei
+geneigtem Zuggurt</p></li>
+<li><p>V<sub>pd</sub>: Querkraftkomponente infolge eines geneigten
+Spannglieds</p></li>
+</ul>
+<p>Für V<sub>Ed</sub> ≤ V<sub>Rd,c</sub> ist rechnerisch keine
+Querkraftbewehrung erforderlich.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/e6b5f45f71e3.webp"/></p>
+<p>Abbildung 2‑34: Querkraftanteile eines gevouteten Trägers (nach EC2,
+Bild 6.2)</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>c</mi><mi>c</mi><mi>d</mi></mrow></msub><mo>=</mo><msubsup><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow><mi>h</mi></msubsup><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>φ</mi><mi>o</mi></msub><mo>=</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>φ</mi><mi>o</mi></msub><mo>≅</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>ψ</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">V_{ccd} = F_{cd}^{h} \cdot tan\varphi_{o} = \frac{M_{Eds}}{z} \cdot tan\varphi_{o} \cong \frac{M_{Eds}}{z} \cdot tan\psi_{o}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑38)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mo>=</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>−</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>z</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">M_{Eds} = M_{Ed} - N_{Ed} \cdot z_{s1}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">N_{Ed}</annotation></semantics></math>
+als Zugkraft positiv)</p>
+</blockquote></td>
+<td class="sk-glnr">(2‑39)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><mo>=</mo><msubsup><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow><mi>h</mi></msubsup><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>φ</mi><mi>u</mi></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>φ</mi><mi>u</mi></msub><mo>≅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mi>z</mi></mfrac><mo>+</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>ψ</mi><mi>u</mi></msub></mrow><annotation encoding="application/x-tex">V_{td} = F_{sd}^{h} \cdot tan\varphi_{u} = \left( \frac{M_{Eds}}{z} + N_{Ed} \right) \cdot tan\varphi_{u} \cong \left( \frac{M_{Eds}}{z} + N_{Ed} \right) \cdot tan\psi_{u}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑40)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mit den Näherungen φ<sub>o</sub> ≈ ψ<sub>o</sub> und φ<sub>u</sub> ≈
+ψ<sub>u</sub> ergibt sich:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mrow><mi>c</mi><mi>c</mi><mi>d</mi></mrow></msub><mo>+</mo><msub><mi>V</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>+</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mo form="prefix" stretchy="true">|</mo><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><mo form="postfix" stretchy="true">|</mo></mrow><mi>z</mi></mfrac><mrow><mo form="prefix" stretchy="true">(</mo><mo>tan</mo><msub><mi>ψ</mi><mi>o</mi></msub><mo>+</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>ψ</mi><mi>u</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>+</mo><msub><mi>N</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>t</mi><mi>a</mi><mi>n</mi><msub><mi>ψ</mi><mi>u</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_{Rd} = V_{Rd,s} + \left( V_{ccd} + V_{td} \right) \approx V_{Ed,s} + \left( \frac{\left| M_{Eds} \right|}{z}\left( \tan\psi_{o} + tan\psi_{u} \right) + N_{Ed} \cdot tan\psi_{u} \right)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑41)</td>
+</tr>
+</tbody>
+</table></div>
+<p>V<sub>ccd</sub> und V<sub>td</sub> sind positiv, wenn sie bezogen auf
+dasselbe Schnittufer in Richtung von V<sub>Rd</sub> weisen (wenn die
+Trägerhöhe mit steigendem Betrag des Biegemomentes zunimmt). Zu beachten
+ist, dass die Zunahme der Trägerhöhe nur bis tan φ = 1/3 angesetzt
+werden sollte (bei Vouten beachten).</p>
+<p>Bei gevouteten Trägern ist daher immer die Kombination aus Querkraft
+und zugehörigem Biegemoment zu untersuchen. Das gilt auch für die
+Biegebemessung. Bei einem Satteldachträger muss unter konstanter
+Belastung nicht immer das Maximalmoment in Feldmitte maßgebend sein, da
+der Hebelarm der inneren Kräfte in Stabmitte auch am größten ist
+(Abbildung 2‑35, Abbildung 2‑36).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/dbd07d43bc23.webp"/></p>
+<p>Abbildung 2‑35: Bemessungsquerkraft für Träger mit veränderlicher
+Höhe (ohne Druckbewehrung)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/3d24b2953fae.webp"/></p>
+<p>Abbildung 2‑36: Querkraft bei gevouteten Trägern</p>
+</section>
+<section class="level3" id="s-2-4-3">
+<h3><span class="sk-nr">2.4.3</span> Auflagernahe Einzellasten</h3>
+<p>Auflagernahe Einzellasten (Lastangriff <em>a</em><sub>v</sub> ≤
+2,0<em>d</em> vom Auflagerrand) werden bei direkter Lagerung teilweise
+über geneigte Druckstreben in die Auflager abgetragen. Daher darf die
+Einzellast mit dem folgenden Faktor abgemindert werden:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mspace width="0.222em"></mspace><mo>=</mo><mfrac><msub><mi>a</mi><mi>v</mi></msub><mrow><mn>2</mn><mi>d</mi></mrow></mfrac><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mn>5</mn><mi>d</mi><mspace width="0.222em"></mspace><mo>≤</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>v</mi></msub><mo>≤</mo><mspace width="0.222em"></mspace><mn>2</mn><mi>d</mi></mrow><annotation encoding="application/x-tex">\beta\  = \frac{a_{v}}{2d}\ \ \ \ \ \ \ \ \ \ 0,5d\  \leq \ a_{v} \leq \ 2d</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, 6.2.3(8))<br/>(2‑42)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Voraussetzung:</p>
+<ul>
+<li><p>Die Lasten und die Auflagerreaktion sollten die Ausbildung von
+geneigten Druckstreben im Bauteil (direkte Lasteinleitung)
+ermöglichen.</p></li>
+</ul>
+<ul>
+<li><p>An Endauflagern sollte die Zugbewehrung, die innerhalb des
+Abstandes 2,0<em>d</em> vom Auflager erforderlich ist, voll über dem
+Auflager verankert werden.</p></li>
+<li><p>An Zwischenauflagern sollte die Zugbewehrung, die am Auflagerrand
+erforderlich ist, mindestens mit einer Länge von (2,0<em>d</em> +
+<em>l</em><sub>b,net</sub>) in das benachbarte Feld geführt
+werden.</p></li>
+</ul>
+<p>Hinweise: Nachweis der Druckstrebe <em>V</em><sub>Rd,max</sub> ohne
+Abminderung</p>
+<blockquote>
+<p>Querkräfte aus weiteren Lasten sind wie gehabt zu berücksichtigen und
+ggf. mit Querkraft aus auflagernaher Einzellast zu überlagern (d.h. zu
+addieren)</p>
+</blockquote>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ab3a1b5f01cf.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/9ab73195076a.webp"/></p>
+<p>Abbildung 2‑37: Abminderung einer Einzellast nahe dem Auflager</p>
+<p>Für Bauteile ohne Querkraftbewehrung muss die Querkraft ohne
+Abminderung V<sub>Ed</sub> folgende Bedingung erfüllen:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≤</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>d</mi><mo>⋅</mo><mi>ν</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mspace width="1.0em"></mspace><mtext mathvariant="normal">mit</mtext><mspace width="0.222em"></mspace><mi>ν</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>675</mn></mrow><annotation encoding="application/x-tex">V_{Ed} \leq 0,5 \cdot b_{w} \cdot d \cdot \nu \cdot f_{cd}\quad\text{mit}\ \nu = 0,675</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑43)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="level2" id="s-2-5">
+<h2><span class="sk-nr">2.5</span> Maßgebende Querschnittsbreite für den Querkraftnachweis</h2>
+<p>Die schräge Druckkraft <em>F</em><sub>cwd</sub> verläuft von der
+Druckzone in den Zuggurt (Bewehrung). Daher gilt beim
+Druckstrebennachweis <em>V</em><sub>Rd,max</sub>: <em>b</em><sub>w</sub>
+= minimale Querschnittsbreite zwischen der Resultierenden der Druck- und
+Zugkraft. Für die Berechnung des Bewehrungsgrades
+<em>ρ</em><sub>l</sub> = a<sub>sl</sub>/(b<sub>w</sub>∙d) bzw.
+<em>ρ</em><sub>w</sub> =
+<em>a</em><sub>sw</sub>/(<em>b</em><sub>w</sub>∙<em>d</em>) und
+<em>V<sub>Rd,c</sub></em> ist <strong><em>b</em><sub>w</sub> gleich der
+kleinsten Querschnittsbreite innerhalb der Zugzone des
+Querschnitts</strong>.</p>
+<p>Sonderfälle: Hohlkastenquerschnitt b<sub>w</sub> = 2 × Stegbreite;
+Fertigteilergänzung siehe Abbildung 2‑38. Bei Kreisquerschnitten ist als
+wirksame Breite b<sub>w</sub> der kleinere Wert der Querschnittsbreite
+zwischen dem Bewehrungsschwerpunkt (Zuggurt) und der Druckresultierenden
+anzusetzen (Abbildung 2‑39). Beides ist jedoch händisch sehr schwer zu
+bestimmen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/61dba4c3cd17.webp"/></p>
+<p>Abbildung 2‑38: Maßgebende Breite b<sub>w</sub></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/fea832d8bdbe.webp"/></p>
+<p>Abbildung 2‑39: Maßgebende Breite b<sub>w</sub> bei
+Kreisquerschnitten</p>
+</section>
+<section class="level2" id="s-2-6">
+<h2><span class="sk-nr">2.6</span> Bemessung für Querkraft nach DIN EN 1992-1-1:2011</h2>
+<p>Nachfolgend werden die Gleichungen für die Bemessung, welche in den
+vorherigen Abschnitten hergeleitet und erläutert wurden,
+zusammengestellt. Bei der Bemessung ist nachzuweisen, dass die
+vorhandene Querkraft V<sub>Ed</sub> die aufnehmbare Querkraft
+V<sub>Rd</sub> nicht überschreitet, d. h. V<sub>Ed</sub> ≤
+V<sub>Rd</sub>. Es werden folgende Querkraftwiderstände definiert:</p>
+<ul>
+<li><p>V<sub>Rd,c</sub>: Querkraftwiderstand eines Bauteils ohne
+Querkraftbewehrung</p></li>
+<li><p>V<sub>Rd,max</sub>: durch die Druckstrebenfestigkeit begrenzter
+maximaler Querkraftwiderstand</p></li>
+<li><p>V<sub>Rd,s</sub>: durch die Fließgrenze der Querkraftbewehrung
+begrenzter Querkraftwiderstand</p></li>
+<li><p>V<sub>Rd,cc</sub>: Querkrafttragfähigkeit eines Bauteils mit
+Querkraftbewehrung infolge Rissreibung</p></li>
+</ul>
+<section class="level3" id="s-2-6-1">
+<h3><span class="sk-nr">2.6.1</span> Querkrafttragfähigkeit ohne Querkraftbewehrung</h3>
+<p>Für Balken – also stabförmige Bauteile - ist im EC2 eine
+Querkraftbewehrung vorgeschrieben, die bestimmte Mindestwerte nicht
+unterschreiten darf.</p>
+<p>Bauteile, für die diese Mindestquerkraftbewehrung nicht
+vorgeschrieben ist, sind flächige Bauteile – Platten. Bei Platten ist
+man bestrebt, den Einbau von Bügeln oder Schrägstäben möglichst zu
+vermeiden, da der Einbau aufwendig und zeitintensiv ist, sowie
+konstruktiv schwierig. Insofern ist gerade für Flächentragwerke die
+Größe der Querkrafttragfähigkeit ohne Querkraftbewehrung
+<em>V</em><sub>Rd,c</sub> von großer Bedeutung.</p>
+<p>Für diese Platten gibt es verschiedene Modelle, über welche
+Tragmechanismen eine Querkrafttragfähigkeit ohne Querkraftbewehrung bzw.
+der Querkraftabtrag funktioniert. Im Allgemeinen werden folgende
+Traganteile als wirksam angenommen:</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/f97a029b6b97.webp"/></p>
+<p>Abbildung 2‑40: Komponenten der Querkraftabtragung (Zahnmodell) nach
+Reineck</p>
+<p>Es besteht Uneinigkeit in den Ingenieurswissenschaften darüber,
+welcher Mechanismus zu welchem Anteil einen Beitrag am Querkraftabtrag
+hat. Die Querkrafttragfähigkeit nach EC2 berücksichtigt in dem Sinne
+auch keine direkte Zuordnung zu einzelnen Anteilen. Die
+Bemessungsgleichung wurde empirisch über eine Auswertung von
+Versuchsdatenbanken über statistische Verfahren abgeleitet, die in
+Abhängigkeit der in der Bemessungsgleichung berücksichtigten Variablen
+(Längsbewehrungsgrad, Druckfestigkeit, Geometrie, etc.) ausgewertet
+wurden.</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>,</mo><mi>c</mi><mo>=</mo><mrow><mo form="prefix" stretchy="true">[</mo><msub><mi>C</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>⋅</mo><mi>k</mi><mo>⋅</mo><msup><mrow><mo form="prefix" stretchy="true">(</mo><mn>100</mn><mo>⋅</mo><msub><mi>ρ</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mo>+</mo><mn>0</mn><mo>,</mo><mn>12</mn><mo>⋅</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>p</mi></mrow></msub><mo form="postfix" stretchy="true">]</mo></mrow><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">V_{Rd},c = \left\lbrack C_{Rd,c}⋅k⋅\left( 100⋅\rho_{1}⋅f_{ck} \right)^{\frac{1}{3}} + 0,12⋅\sigma_{cp} \right\rbrack⋅b_{w}⋅d</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.2a)<br/>(2‑44)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dabei sind:</p>
+<p><em>C</em><sub>Rd,c</sub> 0,15/ γ<sub>C</sub> = 0,1</p>
+<p><em>ρ</em><sub>l</sub> der Längsbewehrungsgrad mit ρ<sub>l</sub> =
+A<sub>sl</sub>/(b<sub>w</sub>·d) ≤ 0,02</p>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn><mo>+</mo><msqrt><mrow><mn>200</mn><mi>/</mi><mi>d</mi></mrow></msqrt><mo>≤</mo><mn>2</mn><mo>,</mo><mn>0</mn><mspace width="1.0em"></mspace><mspace width="1.0em"></mspace><mrow><mtext mathvariant="normal">mit </mtext><mspace width="0.333em"></mspace></mrow><mi>d</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> in mm</mtext></mrow></mrow><annotation encoding="application/x-tex">k = 1 + \sqrt{200/d} \leq 2,0\quad\quad\text{mit }d\text{ in mm}</annotation></semantics></math></span></p>
+<p><em>A</em><sub>sl</sub> die Fläche der Zugbewehrung, die mindestens
+um das Maß (<em>l</em><sub>b</sub> + <em>d</em>) über den betrachteten
+Querschnitt hinausgeführt und dort wirksam verankert wird.</p>
+<p><em>b</em><sub>w</sub> die kleinste Querschnittsbreite innerhalb der
+Zugzone des Querschnitts in mm</p>
+<p><em>d</em> die statische Nutzhöhe der Biegebewehrung im betrachteten
+Querschnitt in mm</p>
+<p><em>σ</em><sub>cp</sub> <em>N</em><sub>Ed</sub>
+/<em>A</em><sub>c</sub> ≤ 0,2<em>f</em><sub>cd</sub> in N/mm²
+(Betondruckspannungen sind positiv!) Bemessungswert der ständig
+wirkenden Betonlängsspannung in Höhe des Schwerpunktes des
+Querschnitts</p>
+<p><em>N</em><sub>Ed</sub> die Normalkraft im Querschnitt infolge
+Lastbeanspruchung oder Vorspannung [N]</p>
+<blockquote>
+<p>(<em>N</em><sub>Ed</sub> &gt; 0 als Längsdruckkraft). Der Einfluss
+von Zwang auf <em>N</em><sub>Ed</sub> darf vernachlässigt werden.</p>
+</blockquote>
+<p>γ<sub>C</sub> Sicherheitsbeiwert = 1,5 für Normalbeton</p>
+<p>Die Querkrafttragfähigkeit ist nach EC2 nach unten begrenzt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>,</mo><mi>c</mi><mspace width="0.222em"></mspace><mo>=</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>v</mi><mo>min</mo></msub><mo>+</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mn>12</mn><mo>⋅</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>p</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">V_{Rd},c\  = \ \left( v_{\min} + \ 0,12⋅\sigma_{cp} \right)⋅b_{w}⋅d</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.2b)<br/>(2‑45)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mo>min</mo></msub><mo>=</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mn>0</mn><mo>,</mo><mn>0525</mn></mrow><msub><mi>γ</mi><mi>C</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><msup><mi>k</mi><mfrac><mn>3</mn><mn>2</mn></mfrac></msup><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></msubsup><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>f</mi><mi>ü</mi><mi>r</mi><mspace width="0.222em"></mspace><mi>d</mi><mo>≤</mo><mn>600</mn><mspace width="0.222em"></mspace><mi>m</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">v_{\min} = \ \left( \frac{0,0525}{\gamma_{C}} \right)⋅k^{\frac{3}{2}}⋅f_{ck}^{\frac{1}{2}}\ \ \ \ \ \ für\ d \leq 600\ mm</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.3aDE)<br/>(2‑46)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mo>min</mo></msub><mo>=</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><mrow><mn>0</mn><mo>,</mo><mn>0375</mn></mrow><msub><mi>γ</mi><mi>C</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><msup><mi>k</mi><mfrac><mn>3</mn><mn>2</mn></mfrac></msup><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></msubsup><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>f</mi><mi>ü</mi><mi>r</mi><mspace width="0.222em"></mspace><mi>d</mi><mo>&gt;</mo><mn>800</mn><mspace width="0.222em"></mspace><mi>m</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">v_{\min} = \ \left( \frac{0,0375}{\gamma_{C}} \right)⋅k^{\frac{3}{2}}⋅f_{ck}^{\frac{1}{2}}\ \ \ \ \ \ für\ d &gt; 800\ mm</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.3bDE)<br/>(2‑47)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/cde4c0dbb405.webp"/></p>
+<p>Die Querkrafttragfähigkeit eines Stahlbetonbauteils ohne
+Querkraftbewehrung hängt im Wesentlichen von der Betonzugfestigkeit
+(f<sub>ctm</sub> = 0,3·f<sub>ck</sub><sup>2/3</sup>), dem
+Biegebewehrungsgrad ρ<sub>l</sub> und der vorhandenen Betondruckspannung
+σ<sub>cd</sub> ab. Die einzelnen Komponenten lassen sich nur
+näherungsweise durch Versuche bestimmen. Insofern ist es auch nicht
+verwunderlich, dass die verschiedenen international gebräuchlichen
+Bemessungsmodelle teilweise zu sehr unterschiedlichen Ergebnissen
+führen.</p>
+<p>Abbildung 2‑41 zeigt einen Vergleich der Bemessungsansätze der alten
+DIN 1045:1988 und der DIN 1045-1:2001 bzw. des EC2. Es wird eine Platte
+mit einer statischen Nutzhöhe von d = 30 cm bzw. d = 55 cm betrachtet
+(Kragplatte einer Brücke). Man erkennt, dass nach dem neuen
+Berechnungsansatz erheblich höhere Längsbewehrungsgrade als bisher
+erforderlich werden, wenn man auf eine Querkraftbewehrung verzichten
+möchte.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/60e332fb35c9.webp"/></p>
+<p>Abbildung 2‑41: Vergleich der Berechnungsansätze zwischen DIN
+1045:1988, DIN 1045-1:2001 und DIN Fachbericht 102 (σ<sub>cd</sub> =
+0)</p>
+<p>Gl. 6.2a (EC2) führt bei nicht vorgespannten Bauteilen mit geringen
+Bewehrungsgraden zu sehr kleinen Querkrafttragfähigkeiten (Abbildung
+2‑41). Dies ist durch neuere Versuchsergebnisse bzw. die langjährige
+Baupraxis nicht gerechtfertigt. Daher wurde eine Mindesttragfähigkeit
+ohne Querkraftbewehrung eingeführt, welche unabhängig von dem
+Längsbewehrungsgrad ist (EC2, Gl. 6.2b).</p>
+</section>
+<section class="level3" id="s-2-6-2">
+<h3><span class="sk-nr">2.6.2</span> Ungerissene Querschnitte</h3>
+<p>Ist die Betonzugspannung in einem Bauteil im Grenzzustand der
+Tragfähigkeit kleiner als f<sub>ctd</sub> =
+0,85·f<sub>ctk;0,05</sub>/γ<sub>C</sub>, so kann von einem ungerissenen
+Querschnitt ausgegangen werden. Dies trifft im Allgemeinen nur bei
+vorgespannten Bauteilen zu. Es gelten die Beziehungen der
+Elastizitätstheorie (siehe Abschnitt 2.2). Die größte Hauptzugspannung
+σ<sub>1</sub> wird hierbei auf zulässige Werte begrenzt
+(Betondruckspannung σ<sub>cd</sub> positiv).</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mit:</mtext><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>⋅</mo><mi>S</mi></mrow><mrow><msub><mi>I</mi><mi>c</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub></mrow></mfrac><mspace width="1.0em"></mspace><mtext mathvariant="normal">bzw.</mtext><mspace width="1.0em"></mspace><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>=</mo><mfrac><mrow><msub><mi>I</mi><mi>c</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub></mrow><mi>S</mi></mfrac><mo>⋅</mo><mi>τ</mi></mrow><annotation encoding="application/x-tex">\text{mit:}\quad\tau = \frac{V_{Rd,c} \cdot S}{I_{c} \cdot b_{w}}\quad\text{bzw.}\quad V_{Rd,c} = \frac{I_{c} \cdot b_{w}}{S} \cdot \tau</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑48)</td>
+</tr>
+</tbody>
+</table></div>
+<p>beträgt die größte Hauptzugspannung im Querschnitt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mo>−</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><msubsup><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow><mn>2</mn></msubsup><mo>+</mo><mn>4</mn><msup><mi>τ</mi><mn>2</mn></msup></mrow></msqrt><mo>=</mo><mfrac><mrow><mo>−</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msqrt><mrow><msubsup><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow><mn>2</mn></msubsup><mo>+</mo><mn>4</mn><mo>⋅</mo><msup><mrow><mo form="prefix" stretchy="true">[</mo><mfrac><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>⋅</mo><mi>S</mi></mrow><mrow><msub><mi>I</mi><mi>c</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub></mrow></mfrac><mo form="postfix" stretchy="true">]</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo>≤</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\sigma_{1} = \frac{- \sigma_{cd}}{2} + \frac{1}{2}\sqrt{\sigma_{cd}^{2} + 4\tau^{2}} = \frac{- \sigma_{cd}}{2} + \frac{1}{2}\sqrt{\sigma_{cd}^{2} + 4 \cdot \left\lbrack \frac{V_{Rd,c} \cdot S}{I_{c} \cdot b_{w}} \right\rbrack^{2}} \leq f_{ctd}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑49)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">[</mo><mfrac><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>⋅</mo><mi>S</mi></mrow><mrow><mi>I</mi><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub></mrow></mfrac><mo form="postfix" stretchy="true">]</mo></mrow><mo>≤</mo><msqrt><mrow><msup><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">\left\lbrack \frac{V_{Rd,c} \cdot S}{I \cdot b_{w}} \right\rbrack \leq \sqrt{\left( f_{ctd} \right)^{2} + \sigma_{cd} \cdot f_{ctd}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑50)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>I</mi><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub></mrow><mi>S</mi></mfrac><mo>⋅</mo><msqrt><mrow><msubsup><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow><mn>2</mn></msubsup><mo>+</mo><msub><mi>α</mi><mi>l</mi></msub><mo>⋅</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">V_{Rd,c} = \frac{I \cdot b_{w}}{S} \cdot \sqrt{f_{ctd}^{2} + \alpha_{l} \cdot \sigma_{cd} \cdot f_{ctd}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.4)<br/>(2‑51)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Hierin sind:</p>
+<ul>
+<li><p>I: Flächenträgheitsmoment 2. Grades des Querschnitts
+(Trägheitsmoment)</p></li>
+<li><p>S: Flächenträgheitsmoment 1. Grades des Querschnitts (statisches
+Moment)</p></li>
+<li><p>α<sub>l</sub> = l<sub>x</sub>/l<sub>bpd</sub> ≤ 1,0 bei
+Vorspannung mit sofortigem Verbund, α<sub>l</sub> = 1,0 sonst</p></li>
+<li><p>l<sub>x</sub>: Abstand des betrachteten Punktes vom Beginn der
+Verankerungslänge des Spanngliedes; l<sub>bpd</sub>: oberer
+Bemessungswert der Übertragungslänge des Spanngliedes</p></li>
+<li><p>f<sub>ctd</sub> =
+α<sub>ct</sub>·f<sub>ctk;0,05</sub>/γ<sub>C</sub> =
+0,85·f<sub>ctk;0,05</sub>/1,5: Bemessungswert der Betonzugfestigkeit;
+f<sub>ctk;0,05</sub> = 0,21·f<sub>ck</sub><sup>2/3</sup> ≤ 2,7
+N/mm²</p></li>
+<li><p>γ<sub>C</sub> = 1,8: Sicherheitsbeiwert für <u>un</u>bewehrten
+Beton</p></li>
+<li><p>σ<sub>cd</sub> = N<sub>Ed</sub>/A<sub>c</sub>: Bemessungswert der
+Betonlängsspannung in Höhe des Schwerpunktes des Querschnitts in N/mm²
+(Betondruckspannung positiv)</p></li>
+</ul>
+<p>Mit dem Faktor α<sub>l</sub> wird die lineare Zunahme der
+Normalspannung σ<sub>cd</sub> im Querschnitt im Bereich der
+Übertragungslänge l<sub>bp</sub> bei Vorspannung mit sofortigem Verbund
+berücksichtigt. Weitere Erläuterungen hierzu in der Lehrveranstaltung
+„Spannbeton- und Massivbrückenbau“.</p>
+</section>
+<section class="level3" id="s-2-6-3">
+<h3><span class="sk-nr">2.6.3</span> Querkrafttragfähigkeit mit Querkraftbewehrung</h3>
+<p>Die Bemessungsgleichungen lassen sich explizit aus den Stabkräften
+herleiten (Abbildung 2‑20). Es ist nachzuweisen, dass die
+Querkrafttragfähigkeit des Querschnitts mit Querkraftbewehrung
+<em>V</em><sub>Rd,s</sub> ausreicht und weiterhin die durch die
+Druckstrebenfestigkeit begrenzte maximal aufnehmbare Querkraft
+<em>V</em><sub>Rd,max</sub> nicht überschritten wird.</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>Strebenzugkraft:</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>s</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><mo>sin</mo><mi>α</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_{swd} = \frac{V_{Ed}}{\sin\alpha}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑52)</td>
+</tr>
+<tr class="odd">
+<td>Die auf die horizontale Längeneinheit</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>s</mi></msub><mo>=</mo><mi>z</mi><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">a_{s} = z⋅\left( \cot\theta + \cot\alpha \right)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑53)</td>
+</tr>
+</tbody>
+</table></div>
+<p>bezogene Strebenzugkraft</p>
+<p>ergibt sich zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>F</mi><mrow><mi>s</mi><mi>w</mi><mi>d</mi></mrow><mi>′</mi></msubsup><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>a</mi><mi>s</mi></msub><mo>⋅</mo><mspace width="0.222em"></mspace><mi>s</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace><mi>α</mi></mrow></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mi>z</mi></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mrow><mi>s</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace><mi>α</mi><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mi>c</mi><mi>o</mi><mi>t</mi><mspace width="0.222em"></mspace><mi>θ</mi><mspace width="0.222em"></mspace><mo>+</mo><mspace width="0.222em"></mspace><mi>c</mi><mi>o</mi><mi>t</mi><mspace width="0.222em"></mspace><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_{swd}^{'} = \frac{V_{Ed}}{a_{s}⋅\ sin\ \alpha} = \frac{V_{Ed}}{z}⋅\frac{1}{sin\ \alpha\ ⋅\ (cot\ \theta\  + \ cot\ \alpha)}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑54)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Spannung in der Querkraftbewehrung <em>σ</em><sub>ywd</sub> der
+Fläche <em>A</em><sub>sw</sub> mit dem Abstand <em>s</em> der Bügel</p>
+<p>in Stablängsrichtung beträgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><msubsup><mi>F</mi><mrow><mi>s</mi><mi>w</mi><mi>d</mi></mrow><mi>′</mi></msubsup><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mi>z</mi></mfrac><mo>⋅</mo><mfrac><mi>s</mi><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mrow><mo>sin</mo><mi>α</mi><mo>⋅</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma_{ywd} = \frac{F_{swd}^{'}}{\frac{A_{sw}}{s}} = \frac{V_{Ed}}{z}⋅\frac{s}{A_{sw}}⋅\frac{1}{\sin\alpha⋅\ \left( \cot\theta + \cot\alpha \right)}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑55)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Stahlspannung in der Querkraftbewehrung darf maximal die Größe
+<em>f</em><sub>ywd</sub> erreichen. Hieraus folgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mi>s</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≤</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mspace width="0.222em"></mspace><mi>z</mi><mspace width="0.222em"></mspace><mo>⋅</mo><mo>sin</mo><mi>α</mi><mo>⋅</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_{Rds} = V_{Ed} \leq \frac{A_{sw}}{s}⋅\ f_{ywd}⋅\ z\ ⋅\sin\alpha⋅\ \left( \cot\theta + \cot\alpha \right)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.13)<br/>(2‑56)</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>mit: <em>A</em><sub>sw</sub> die Querschnittsfläche der
+Querkraftbewehrung</p>
+<p><em>s</em> der Bügelabstand</p>
+<p><em>f</em><sub>ywd</sub> der Bemessungswert der Streckgrenze der
+Querkraftbewehrung</p>
+<p>i.d.R. <em>f</em><sub>ywd</sub> = 500/1,15 = 435 MN/m²</p>
+</blockquote>
+<p>bzw. die erforderliche Bügelbewehrung:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac><mo>≥</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mi>z</mi><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mo>sin</mo><mi>α</mi><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{A_{sw}}{s} \geq \frac{V_{Ed}}{f_{ywd}\ ⋅\ z\ ⋅\ \sin\alpha\ \left( \cot\theta + \cot\alpha \right)}</annotation></semantics></math>
+[cm²/m]</p>
+</blockquote></td>
+<td class="sk-glnr">(2‑57)</td>
+</tr>
+</tbody>
+</table></div>
+<p>bei Querkraftbewehrung senkrecht zur Bauteilachse gilt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>,</mo><mi>s</mi><mo>=</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mo>cot</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">V_{Rd},s = \frac{A_{sw}}{s}⋅f_{yd}⋅z⋅\cot\theta</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.8)<br/>(2‑58)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac><mo>≥</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mi>z</mi><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mo>cot</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{A_{sw}}{s} \geq \frac{V_{Ed}}{f_{ywd}\ ⋅\ z\ ⋅\ \cot\theta}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑59)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Kraft in der Druckstrebe ergibt sich entsprechend:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>c</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mi>/</mi><mi>s</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace><mi>θ</mi><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">F_{cwd} = V_{Ed}/sin\ \theta\ </annotation></semantics></math></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑60)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Allgemein ergibt sich die gemittelte Betondruckspannung der
+Druckstrebe:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><em>σ</em><sub>cwd</sub>
+=<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi></mrow></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mrow><msup><mo>sin</mo><mn>2</mn></msup><mi>θ</mi><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{V_{Ed}}{b_{w}⋅z}⋅\frac{1}{\sin^{2}\theta\ \left( \cot\theta + \cot\alpha \right)}</annotation></semantics></math></td>
+<td class="sk-glnr">(2‑61)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>mit: <em>b</em><sub>w</sub> = kleinste Breite zwischen Zug- und
+Druckgurt</p>
+</blockquote>
+<p>Die Betondruckspannung darf den zulässigen Wert von
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝛎</mi><mn>𝟏</mn></msub><mo mathvariant="bold">•</mo><msub><mi>𝐟</mi><mrow><mi>𝐜</mi><mi>𝐝</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mathbf{\nu}_{\mathbf{1}}\mathbf{\bullet}\mathbf{f}_{\mathbf{cd}}</annotation></semantics></math>
+nicht überschreiten. Hieraus</p>
+<p>folgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><em>ν</em><sub>1</sub>∙<em>f</em><sub>cd</sub> ≥
+<em>σ</em><sub>cwd</sub> =</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi></mrow></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mrow><msup><mo>sin</mo><mn>2</mn></msup><mi>θ</mi><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{V_{Ed}}{b_{w}⋅z}⋅\frac{1}{\sin^{2}\theta⋅\left( \cot\theta + \cot\alpha \right)}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑62)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≤</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><msup><mo>sin</mo><mn>2</mn></msup><mi>θ</mi><mrow><mo form="prefix" stretchy="true">(</mo><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_{Ed} \leq \nu_{1}⋅f_{cd}⋅b_{w}⋅z⋅\sin^{2}\theta\left( \cot\theta + \cot\alpha \right)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑63)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: sin² θ = 1 / (1 + cot² θ) folgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≤</mo><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>=</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mrow><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>cot</mo><mi>α</mi></mrow><mrow><mn>1</mn><mspace width="0.222em"></mspace><mo>+</mo><msup><mo>cot</mo><mn>2</mn></msup><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">V_{Ed} \leq V_{Rd},max = b_{w}⋅z⋅\nu_{1}⋅f_{cd}⋅\frac{\cot\theta + \cot\alpha}{1\  + \cot^{2}\theta}</annotation></semantics></math></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.14)<br/>(2‑64)</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>bei Querkraftbewehrung senkrecht zur Bauteilachse gilt:</p>
+</blockquote>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>≤</mo><mspace width="0.222em"></mspace><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mo>max</mo></mrow></msub><mo>=</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mfrac><mn>1</mn><mrow><mo>cot</mo><mi>θ</mi><mo>+</mo><mo>tan</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">V_{Ed} \leq \ V_{Rd,\max} = b_{w}⋅z⋅\nu_{1}⋅f_{cd}⋅\frac{1}{\cot\theta + \tan\theta}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑65)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: <em>b</em><sub>w</sub> = minimale Querschnittsbreite in der
+Nutzhöhe <em>d</em></p>
+<blockquote>
+<p><em>ν</em><sub>1</sub> = 0,75 für ≤ C50/60 – Abminderungsbeiwert für
+die Betondruckfestigkeit bei Schubrissen</p>
+</blockquote>
+<p>Die erforderliche Querkraftbewehrung hängt somit neben der Belastung
+von der zunächst frei gewählten Neigung der Betondruckstreben θ und der
+Neigung der Querkraftbewehrung α ab. Versuche mit verschiedenen
+Tragsystemen zeigen, dass die Neigung der Druckstrebe θ im Allgemeinen
+ca. 20° bis 70° beträgt. Sehr flache und sehr steile Winkel sind bislang
+nicht beobachtet worden. Daher muss die gewählte Druckstrebenneigung in
+gewissen Grenzen liegen.</p>
+<p>Nach EC2 gilt: 1,0 ≤ cot θ ≤ 3,0 bzw. 18,40° ≤ θ ≤ 45°</p>
+<p>Der Druckstrebenwinkel bestimmt wesentlich die erforderliche
+Querkraftbewehrung. Flache Druckstreben führen zu einer kleineren Kraft
+in der Bügelbewehrung und umgekehrt.</p>
+<p>Ebenfalls empirisch hergeleitet (an Versuchsdatenbanken kalibriert)
+gilt für den Winkel der Betondruckstreben in Abhängigkeit der
+Belastung:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>≤</mo><mo>cot</mo><mi>θ</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mspace width="0.222em"></mspace><mo>+</mo><mspace width="0.222em"></mspace><mn>1</mn><mo>,</mo><mn>4</mn><mspace width="0.222em"></mspace><mo>⋅</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><mn>1</mn><mspace width="0.222em"></mspace><mo>−</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>c</mi></mrow></msub><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac><mo>≤</mo><mspace width="0.222em"></mspace><mn>3</mn><mo>,</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">1,0\  \leq \cot\theta = \frac{1,2\  + \ 1,4\ ⋅\ \left( \frac{\sigma_{cd}}{f_{cd}} \right)}{1\  - \ \left( \frac{V_{Rd,cc}}{V_{Ed}} \right)} \leq \ 3,0</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑66)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: Betontraganteil <em>V</em><sub>Rd,cc</sub> für Balken mit
+Querkraftbewehrung</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>c</mi></mrow></msub><mo>=</mo><mi>c</mi><mo>⋅</mo><mn>0</mn><mo>,</mo><mn>48</mn><mspace width="0.222em"></mspace><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></msubsup><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>−</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">V_{Rd,cc} = c⋅0,48\ ⋅f_{ck}^{\frac{1}{3}}⋅\left( 1 - 1,2⋅\left( \frac{\sigma_{cd}}{f_{cd}} \right) \right)⋅\ b_{w}⋅z</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 6.7bDE)<br/>(2‑67)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>c</em> = 0,50</p>
+<p><em>σ</em><sub>cd</sub> Bemessungswert der Betonlängsspannung in Höhe
+des Schwerpunkts</p>
+<blockquote>
+<p>des Querschnitts mit <em>σ</em><sub>cd</sub> =
+<em>N</em><sub>Ed</sub> / <em>A</em><sub>c</sub> in N/mm²
+Betonzugspannungen sind negativ</p>
+<p><em>N</em><sub>Ed</sub> Bemessungswert der Längskraft im Querschnitt
+infolge äußerer Einwirkungen oder Vorspannung (<em>N</em><sub>Ed</sub>
+&gt; 0 als Längsdruckkraft)</p>
+</blockquote>
+<p><em>z</em> Innerer Hebelarm ≈ 0,9∙<em>d</em> aber: z = max{<em>d</em>
+- <em>c</em><sub>v,l</sub> - 30 mm ; <em>d</em> - 2c<sub>v,l</sub>}</p>
+<p><em>c</em><sub>v,l</sub> Verlegemaß der Längsbewehrung in der
+Betondruckzone</p>
+<p>Vereinfachend dürfen für den Druckstrebenwinkel folgende Werte
+angesetzt werden:</p>
+<ul>
+<li><p>reine Biegung cot θ = 1,2 (θ = 39,8°)</p></li>
+<li><p>Biegung und Längsdruckkraft cot θ = 1,2 (θ = 39,8°)</p></li>
+<li><p>Biegung und Längszugkraft cot θ = 1,0 (θ = 45,0°)</p></li>
+</ul>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/5886d03fcff2.webp"/></p>
+<p>Abbildung 2‑42: Fachwerkmodell für querkraftbewehrte Bauteile (nach
+EC2, Bild 6.5)</p>
+<p>Hierin ist V<sub>Rd,cc</sub> der vom Betonquerschnitt aufgenommene
+Querkraftanteil des Bauteils <strong>mit</strong> Querkraftbewehrung
+(Abbildung 2‑43). Er hängt von der Betonzugfestigkeit (f<sub>ct</sub>
+ist proportional zu f<sub>ck</sub><sup>1/3</sup>) und der Druck- bzw.
+Zugspannung in der Schwerachse des Querschnitts ab.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/758ab23f53c2.webp"/></p>
+<p>Abbildung 2‑43: Komponenten der Querkraftabtragung (nach Reineck)</p>
+<p>Die Stabkräfte des Fachwerks und damit die rechnerisch erforderliche
+Querkraftbewehrung sowie die Betondruckspannung hängen von der
+Druckstrebenneigung θ ab. Die erforderliche Querkraftbewehrung nimmt mit
+geringer werdendem θ ab, wie man aus Abbildung 2‑44 sieht. Die
+aufnehmbare Druckkraft hat ihr Maximum bei θ = 45°. Wie aus Abbildung
+2‑44 zu erkennen ist, können die vereinfachten Werte (cot θ = 1,2 bzw.
+1,0) erheblich zu große Bügelbewehrungsmengen liefern.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/d86afa4cdf6e.webp"/></p>
+<p>Abbildung 2‑44: Einfluss des Druckstrebenwinkels θ auf
+V<sub>Rd,max</sub> und die Bügelbewehrung a<sub>sw</sub> (α = 90°)</p>
+<p><strong>Beachte:</strong> bei gleichmäßig verteilter Belastung und
+direkter Lagerung werden V<sub>Rd,s</sub> und V<sub>Rd,c</sub> im
+Abstand d vom Auflagerrand und V<sub>Rd,max</sub> am Auflagerrand
+nachgewiesen; bei indirekter Lagerung ist V<sub>Ed</sub> in der
+Auflagerachse zu bestimmen. Dort sind auch alle Nachweise zu führen.</p>
+</section>
+</section>
+<section class="level2" id="s-2-7">
+<h2><span class="sk-nr">2.7</span> Konstruktive Regeln – Bauliche Durchbildung</h2>
+<section class="level3" id="s-2-7-1">
+<h3><span class="sk-nr">2.7.1</span> Mindestquerkraftbewehrung</h3>
+<p>Die Mindestquerkraftbewehrung soll ein sprödes Versagen von Balken
+verhindern. Bei Platten ist sie, wie zuvor beschrieben, nicht
+erforderlich, da Umlagerungen der Schnittgrößen zu weniger beanspruchten
+Bereichen möglich sind.</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>w</mi></msub><mo>=</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mrow><mi>s</mi><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mo>sin</mo><mi>α</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho_{w} = \frac{A_{sw}}{s⋅b_{w}⋅\sin\alpha}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(EC2, Gl. 9.4)<br/>(2‑68)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>w</mi></msub><annotation encoding="application/x-tex">\rho_{w}</annotation></semantics></math>
+= vorhandener Bewehrungsgrad der Querkraftbewehrung mit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>w</mi></msub><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">\rho_{w}\ </annotation></semantics></math>≥
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>w</mi><mo>,</mo><mi>m</mi><mi>i</mi><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{w,min}</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><annotation encoding="application/x-tex">A_{sw}</annotation></semantics></math>
+= Querschnittsfläche der Querkraftbewehrung je Länge s
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+= Abstand der Querkraftbewehrung in Balkenlängsrichtung
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mi>w</mi></msub><annotation encoding="application/x-tex">b_{w}</annotation></semantics></math>
+= Stegbreite
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+= Winkel zwischen Querkraftbewehrung und Balkenachse (für Bügel: α =
+90°)</p>
+<p>Nach EC2, 9.2.2(5) gilt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>Allgemein:</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>w</mi><mo>,</mo><mo>min</mo></mrow></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>16</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\rho_{w,\min} = 0,16⋅\frac{f_{ctm}}{f_{yk}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑69)</td>
+</tr>
+<tr class="odd">
+<td>Für gegliederte Querschnitte mit vorgespanntem Zuggurt:</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>w</mi><mo>,</mo><mo>min</mo></mrow></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>256</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\rho_{w,\min} = 0,256⋅\frac{f_{ctm}}{f_{yk}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑70)</td>
+</tr>
+<tr class="odd">
+<td>mit:</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>3</mn><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mfrac><mn>2</mn><mn>3</mn></mfrac></msubsup><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">f_{ctm} = 0,3⋅f_{ck}^{\frac{2}{3}}\ </annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑71)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Tabelle 2‑2: Mindestquerkraftbewehrung für Balken</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/f0a87d5ba91d.webp"/></p>
+<section class="level4">
+<h4>Hintergründe der Mindestquerkraftbewehrung</h4>
+<p>(siehe DAfStb Heft 525, S. 211 ff.) Die Mindestquerkraftbewehrung
+muss die Kraft übernehmen können, die vor der Schubrissbildung vom Beton
+übertragen wurde (Abbildung 2‑45). Maximal aufnehmbare Querkraft vor der
+Schubrissbildung: V<sub>Rd</sub> = V<sub>Rm,c</sub> bei Querschnitten
+mit Biegerissen bzw. V<sub>Rd</sub> =
+b<sub>w</sub>·z·f<sub>ctk;0,05</sub> bei ungerissenen Querschnitten.
+Nach der Schubrissbildung (mit cot θ = 3,0):</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><msub><mi>s</mi><mi>w</mi></msub></mfrac><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mo>=</mo><msub><mi>ρ</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mo>=</mo><msub><mi>ρ</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">V_{Rd} = V_{Rd,s} = \frac{A_{sw}}{s_{w}} \cdot f_{yd} \cdot z \cdot cot\theta = \rho_{w} \cdot b_{w} \cdot f_{yd} \cdot z \cdot cot\theta = \rho_{w} \cdot b_{w} \cdot f_{yd} \cdot z \cdot 3</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑72)</td>
+</tr>
+</tbody>
+</table></div>
+<p>a) Gegliederter Querschnitt mit vorgespanntem Zuggurt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mo>=</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>k</mi><mo>;</mo><mn>0</mn><mo>,</mo><mn>05</mn></mrow></msub><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><msub><mi>ρ</mi><mrow><mi>w</mi><mo>,</mo><mo>min</mo></mrow></msub><mo>=</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>k</mi><mo>;</mo><mn>0</mn><mo>,</mo><mn>05</mn></mrow></msub><mrow><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub><mi>/</mi><mn>1</mn><mo>,</mo><mn>15</mn><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><mn>3</mn></mrow></mfrac><mo>=</mo><mn>0</mn><mo>,</mo><mn>268</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac><mo>≈</mo><mn>0</mn><mo>,</mo><mn>256</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\rho_{w} \cdot b_{w} \cdot f_{yd} \cdot z \cdot cot\theta = b_{w} \cdot z \cdot f_{ctk;0,05}\  \Rightarrow \ \rho_{w,\min} = \frac{f_{ctk;0,05}}{\left( f_{yk}/1,15 \right) \cdot 3} = 0,268 \cdot \frac{f_{ctm}}{f_{yk}} \approx 0,256 \cdot \frac{f_{ctm}}{f_{yk}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑73)</td>
+</tr>
+</tbody>
+</table></div>
+<p>b) Sonstige Bauteile: V<sub>Rm,c</sub> =
+[0,197·k·(100·ρ<sub>l</sub>·f<sub>ck</sub>)<sup>1/3</sup> +
+0,12·σ<sub>cd</sub>]·b<sub>w</sub>·d mit k = 2,0 (d ≤ 200 mm),
+ρ<sub>l</sub> = 1,4 % und σ<sub>cd</sub> = 0 folgt V<sub>Rm,c</sub> =
+0,44·f<sub>ck</sub><sup>1/3</sup>·b<sub>w</sub>·d ≈
+0,44·f<sub>ctm</sub>·b<sub>w</sub>·d und damit:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>w</mi><mo>,</mo><mo>min</mo></mrow></msub><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>R</mi><mi>m</mi><mo>,</mo><mi>c</mi></mrow></msub><mrow><mn>3</mn><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>0</mn><mo>,</mo><mn>44</mn><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>d</mi></mrow><mrow><mn>3</mn><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub><mi>/</mi><mn>1</mn><mo>,</mo><mn>15</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow></mfrac><mo>≈</mo><mn>0</mn><mo>,</mo><mn>19</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac><mo>≈</mo><mn>0</mn><mo>,</mo><mn>16</mn><mo>⋅</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>m</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>k</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">\rho_{w,\min} = \frac{V_{Rm,c}}{3 \cdot b_{w} \cdot z \cdot f_{yk}} = \frac{0,44 \cdot f_{ctm} \cdot b_{w} \cdot d}{3 \cdot b_{w} \cdot z \cdot \left( f_{yk}/1,15 \right)} \approx 0,19 \cdot \frac{f_{ctm}}{f_{yk}} \approx 0,16 \cdot \frac{f_{ctm}}{f_{yk}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑74)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/17eb1a1d4f95.webp"/></p>
+<p>Abbildung 2‑45: Umlagerung der Risskraft bei gegliederten
+Querschnitten mit vorgespanntem Zuggurt (nach DAfStb Heft 525, S.
+211)</p>
+</section>
+</section>
+<section class="level3" id="s-2-7-2">
+<h3><span class="sk-nr">2.7.2</span> Mittelbare bzw. indirekte Lagerung</h3>
+<p>Bei einer indirekten (mittelbaren) Lagerung oder bei der Eintragung
+von Lasten an der Unterkante von Trägern muss eine Aufhängebewehrung
+vorgesehen werden. Diese ist bei indirekter Lagerung sowohl im Haupt-
+als auch im Nebenträger vorzusehen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b65c052ca7d8.webp"/></p>
+<p>Abbildung 2‑46: Bügelbewehrung bei indirekter (mittelbarer)
+Lagerung</p>
+<p>Die Bereiche l<sub>1</sub> bzw. l<sub>2</sub> der Aufhängebewehrung
+ergeben sich zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo form="prefix" stretchy="true">{</mo><mfrac><msub><mi>h</mi><mn>1</mn></msub><mn>3</mn></mfrac><mo>;</mo><mspace width="0.222em"></mspace><mfrac><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>−</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac><mo form="postfix" stretchy="true">}</mo></mrow><mspace width="1.0em"></mspace><mtext mathvariant="normal">bzw.</mtext><mspace width="1.0em"></mspace><msub><mi>l</mi><mn>2</mn></msub><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo form="prefix" stretchy="true">{</mo><mfrac><msub><mi>h</mi><mn>2</mn></msub><mn>3</mn></mfrac><mo>;</mo><mspace width="0.222em"></mspace><mfrac><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>−</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mn>2</mn></mfrac><mo form="postfix" stretchy="true">}</mo></mrow></mrow><annotation encoding="application/x-tex">l_{1} = min\left\{ \frac{h_{1}}{3};\ \frac{h_{1} - b_{2}}{2} \right\}\quad\text{bzw.}\quad l_{2} = min\left\{ \frac{h_{2}}{3};\ \frac{h_{2} - b_{1}}{2} \right\}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑75)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>s</mi><mo>,</mo><mi>S</mi><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mi>/</mi><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mspace width="1.0em"></mspace><mtext mathvariant="normal">mit</mtext><mspace width="0.222em"></mspace><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>A</mi></mrow></msub><mo>=</mo><mtext mathvariant="normal">Auflagerkraft</mtext></mrow><annotation encoding="application/x-tex">A_{s,St} = V_{Ed,A}/f_{yd}\quad\text{mit}\ V_{Ed,A} = \text{Auflagerkraft}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑76)</td>
+</tr>
+</tbody>
+</table></div>
+<section class="level4">
+<h4>Aufhängebewehrung bei Überzügen</h4>
+<p>Bei Überzügen ist neben dem normalen Querkraftnachweis weiterhin eine
+Aufhängebewehrung vorzusehen (vergleiche: indirekte Lagerung). Die
+angehängten Lasten müssen in den Druckgurt geleitet werden (Abbildung
+2‑47).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c24e9b508d40.webp"/></p>
+<p>Abbildung 2‑47: Abfangung von Wand- und Deckenlasten</p>
+<p>Die erforderliche Aufhängebewehrung beträgt für eine gleichförmige
+Belastung (s = Bügelabstand):</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi><mo>,</mo><mi>e</mi><mi>r</mi><mi>f</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub></mfrac><mo>=</mo><mfrac><mrow><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>s</mi></mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub></mfrac><mspace width="1.0em"></mspace><mo>⇒</mo><mspace width="1.0em"></mspace><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi><mo>,</mo><mi>e</mi><mi>r</mi><mi>f</mi></mrow></msub><mi>s</mi></mfrac><mo>=</mo><mfrac><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">A_{sw,erf} = \frac{F_{sd}}{f_{ywd}} = \frac{(g + q)_{Ed} \cdot s}{f_{ywd}}\quad \Rightarrow \quad\frac{A_{sw,erf}}{s} = \frac{(g + q)_{d}}{f_{ywd}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑77)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Bügelbewehrung aus Querkraft beträgt (x = Abstand vom
+Auflager):</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mi>w</mi></mrow></msub><mi>s</mi></mfrac><mo>=</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">a_{sw} = \frac{A_{sw}}{s} = \frac{V_{Ed}}{f_{ywd} \cdot z \cdot cot\theta} = \frac{(g + q)_{d} \cdot (0,5l - x)}{f_{ywd} \cdot z \cdot cot\theta}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑78)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bestimmung, ab wo die Aufhängebewehrung größer als die
+Querkraftbewehrung ist:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi></mrow></mfrac><mo>≤</mo><mfrac><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub><msub><mi>f</mi><mrow><mi>y</mi><mi>w</mi><mi>d</mi></mrow></msub></mfrac><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow><mo>≤</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mi>z</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>t</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">\frac{(g + q)_{d} \cdot (0,5l - x)}{f_{ywd} \cdot z \cdot cot\theta} \leq \frac{(g + q)_{d}}{f_{ywd}}\  \Rightarrow \ (0,5l - x) \leq z \cdot cot\theta\  \Rightarrow \ x \geq 0,5l - z \cdot cot\theta</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑79)</td>
+</tr>
+</tbody>
+</table></div>
+<p>d. h. im Bereich z·cot θ von der Feldmitte ist bei gleichförmiger
+Belastung bei einem Einfeldträger die erforderliche Aufhängebewehrung
+größer als die Querkraftbewehrung (unabhängig von der äußeren Last). In
+der obigen Berechnung wurde <strong>nicht</strong> berücksichtigt, dass
+im Bereich V<sub>Ed</sub> ≤ V<sub>Rd,c</sub> rechnerisch keine
+Querkraftbewehrung erforderlich ist. Mit σ<sub>cp</sub> = 0 sowie unter
+Vernachlässigung der Biegebewehrung (ρ<sub>l</sub> = 0) folgt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mo>,</mo><mo>min</mo></mrow></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>0</mn><mo>,</mo><mn>0525</mn><mi>/</mi><msub><mi>γ</mi><mi>C</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><msup><mi>k</mi><mrow><mn>3</mn><mi>/</mi><mn>2</mn></mrow></msup><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow></msubsup><mo>⋅</mo><msub><mi>b</mi><mi>w</mi></msub><mo>⋅</mo><mi>d</mi><mo>=</mo><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>=</mo><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow><mspace width="0.222em"></mspace><mo>⇒</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>5</mn><mi>l</mi><mo>−</mo><mfrac><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mo>,</mo><mo>min</mo></mrow></msub><msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>g</mi><mo>+</mo><mi>q</mi><mo form="postfix" stretchy="true">)</mo></mrow><mi>d</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">V_{Rd,c,\min} = \left( 0,0525/\gamma_{C} \right) \cdot k^{3/2} \cdot f_{ck}^{0,5} \cdot b_{w} \cdot d = V_{Ed} = (g + q)_{d} \cdot (0,5l - x)\  \Rightarrow \ x = 0,5l - \frac{V_{Rd,c,\min}}{(g + q)_{d}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑80)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Beispiel:</strong> b/d = 30/60 cm, (g + q)<sub>d</sub> = 10
+kN/m, C30/37: k = 1 + √(200/600) = 1,577 &lt; 2,0; V<sub>Rd,c,min</sub>
+=
+(0,0525/1,5)·1,577<sup>3/2</sup>·30<sup>0,5</sup>·300·600·10<sup>-3</sup>
+= 68,4 kN; x = 0,5l – 68,4/10 = 0,5l – 6,84 m. Der Bereich, in welchem
+die Aufhängebewehrung maßgebend wird, ist somit größer als z·cot θ.</p>
+</section>
+</section>
+<section class="level3" id="s-2-7-3">
+<h3><span class="sk-nr">2.7.3</span> Anschluss Druck- und Zuggurte von Plattenbalken</h3>
+<section class="level4">
+<h4>Plattenbalken – Allgemeines</h4>
+<p>Plattenbalken sind T-förmige Querschnitte, die aus einer Deckenplatte
+im Hochbau oder entsprechenden Fahrbahnplatten im Brückenbau und einem
+darunter liegenden Balken bestehen. Sie werden häufig im Stahlbetonbau
+eingesetzt, um große Spannweiten und hohe Lasten zu überbrücken.</p>
+<p>Das System Plattenbalken ergibt sich dabei direkt aus dem
+Zusammenwirken der Platte und des darunterliegenden Stabes. Im Feld mit
+positivem Biegemoment und obenliegender Platte übernimmt die Platte
+hauptsächlich Druckkräfte aus dem einwirkenden Biegemoment. Die
+korrespondierenden Zugkräfte werden von der Längsbewehrung des unten
+liegenden Balkens abgetragen.</p>
+<p>Weitere Beispiele für Plattenbalken sind in den nachfolgenden
+Abbildungen dargestellt.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/fe1765ecc20d.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/7f5b742d0221.webp"/> <img alt="Abbildung" loading="lazy" src="skript/media/6785e8a865a1.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/87cda09f25a4.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/a324b92fde9e.webp"/></p>
+<p>Abbildung 2‑48: Beispiele für Plattenbalken</p>
+<p>Die Bemessung von Plattenbalken erfordert die Berücksichtigung der
+mitwirkenden Plattenbreite, die angibt, wie viel von der Platte im
+Druckbereich des Balkens zur Lastabtragung beiträgt. Die mitwirkende
+Plattenbreite hängt von verschiedenen Faktoren ab, wie zum Beispiel der
+Querschnittsgeometrie, der Schub- und Biegesteifigkeit der Platte, der
+Art und Verteilung der Belastung und dem Tragsystem. Die genaue
+Bestimmung der mitwirkenden Plattenbreite ist sehr aufwendig und kann
+nur mit numerischen Methoden erfolgen. Hierbei handelt es sich um ein
+dreidimensionales Tragwerk.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c8e61b95551e.webp"/></p>
+<p>Abbildung 2‑49: Verschiedene Arten von Plattenbalken - Übersicht</p>
+<p>Für den normalen Hochbau bietet der Eurocode 2 eine Näherungsformel
+an, die ausreichend genaue und sichere Ergebnisse liefert.</p>
+<p>Auch wenn die Platte im Zugbereich liegt, wie es zum Beispiel im
+Bereich negativer Biegemomente über Innenlagern von Durchlaufträgern
+vorkommt, sollten bestimmte Randbedingungen und Betrachtungen
+durchgeführt werden, um ein robustes Tragwerk sicherzustellen.</p>
+</section>
+<section class="level4">
+<h4>Plattenbalken und mitwirkende Plattenbreite – Zusammenhänge</h4>
+<section class="level5" id="effektive-plattenbreite-nach-ec2---din-en-1992-1-1-5.3.2.1">
+<h5>Effektive Plattenbreite nach EC2 - DIN EN 1992-1-1, 5.3.2.1</h5>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/0b308b51d655.webp"/></p>
+<p>Beispiel - System Plattenbalken:</p>
+<p><em>l</em><sub>eff</sub> = 10 m, Breite der Platte 10 m; Steghöhe = 1
+m; Stegbreite = 20 cm;</p>
+<p>Dicke der Platte 25 cm</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/c1fc62c79154.webp"/></p>
+<p>Abbildung 2‑50: Mitwirkende Plattenbreite bei einem mehrstegigen
+System</p>
+<p>Der Abstand der Momentennullpunkte <em>l</em><sub>0</sub> kann
+vereinfachend bei annähernd gleichen Steifigkeitsverhältnissen mit 0,8
+&lt; <em>l</em><sub>1</sub> / <em>l</em><sub>2</sub> &lt; 1,25 nach
+folgender Abbildung ermittelt werden.</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>e</mi><mi>f</mi><mi>f</mi><mo>,</mo><mi>i</mi></mrow></msub><mspace width="0.222em"></mspace><mo>=</mo><mspace width="0.222em"></mspace><mi>m</mi><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">{</mo><mspace width="0.222em"></mspace><msub><mi>b</mi><mi>i</mi></msub><mo>;</mo><mspace width="0.222em"></mspace><mn>0.2</mn><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>l</mi><mn>0</mn></msub><mo>;</mo><mspace width="0.222em"></mspace><mn>0.2</mn><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>b</mi><mi>i</mi></msub><mo>+</mo><mspace width="0.222em"></mspace><mn>0.1</mn><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>l</mi><mn>0</mn></msub><mo form="postfix" stretchy="true">}</mo></mrow></mrow><annotation encoding="application/x-tex">b_{eff,i}\  = \ min\ \left\{ \ b_{i};\ 0.2 \cdot \ l_{0};\ 0.2 \cdot \ b_{i} + \ 0.1 \cdot \ l_{0} \right\}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑81)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>b</mi><mrow><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub><mo>=</mo><munderover><mo>∑</mo><mi>i</mi><mrow></mrow></munderover><mrow><msub><mi>b</mi><mrow><mi>e</mi><mi>f</mi><mi>f</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mi>w</mi></msub></mrow></mrow><annotation encoding="application/x-tex">b_{eff} = \sum_{i}^{}{b_{eff,i} + b_{w}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑82)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/346f9663be51.webp"/></p>
+<p>Lösung:</p>
+<p><em>b<sub>i</sub></em> = 4,8 m; <em>l</em><sub>o</sub> = 10 m;
+<em>b<sub>w</sub></em>= 0,2 m</p>
+<p><em>b<sub>eff,i</sub></em> = min aus [4,8 m, 0,2∙10 = 2 m; 0,2 ∙ 4,8
++ 0,1 ∙ 10 = 1,96 m] 1,96 m</p>
+<p><em>b<sub>eff</sub></em> = 1,96 ∙ 2 + 0,2 = <strong>4,12
+m</strong></p>
+<p>Nachfolgend soll über eine Vergleichsbetrachtung die mitwirkende
+Breite des Plattenbalkens über eine FE-Berechnung hergeleitet
+werden.</p>
+</section>
+</section>
+<section class="level4">
+<h4>Beispiel Test und Anschauung in SOFiSTiK</h4>
+<p>Ziel der nachfolgenden Betrachtung ist es, ein exzentrisches
+FE-Modell zu erzeugen, welches die Verhältnisse und Normalspannungen
+abbilden kann. Bei einem Plattenbalken steht der Steg vorrangig unter
+Zug und der Plattenbereich unter Druckbeanspruchung; über den sich
+daraus ergebenden inneren Hebelarm wird das Biegemoment abgetragen.</p>
+<p>In SOFiSTiK wie in anderen FE-Programmen gibt es verschiedene
+Modellierungsmöglichkeiten, um den Plattenbalken zu modellieren.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/578da625d0a2.webp"/></p>
+<p>Abbildung 2‑51: Vergleich dreier Modelle zur Abbildung eines
+Plattenbalken-Tragverhaltens in SOFiSTiK</p>
+<p><strong>Modell 1 – Exzentrisch gekoppelter Stab</strong></p>
+<p>Der unterhalb der Platte liegende Steganteil kann als exzentrisch
+unterhalb der Platte liegender Stab definiert werden. Probleme gibt es
+bei der Bemessung, da eine Bemessung des Gesamtplattenbalkens die
+Schnittkraftsumme aus Steg + Platte inklusive der Steineranteile
+erfordert. Das Verfahren ist daher nur für Verbundplatten sinnvoll, bei
+denen der Stahlträger exzentrisch definiert werden kann. Hieraus
+entstehen in den Schalenelementen der Platte Membrankräfte bzw.
+Normalspannungen, die für die Betrachtung zur mittragenden Breite
+verwendet werden können.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/73cc053ef48c.webp"/></p>
+<p>Abbildung 2‑52: Plattenbalkenmodell mit exzentrisch gekoppeltem
+Stab</p>
+<p><strong>Modell 2 – Steg aus Schalenelementen</strong></p>
+<p>Der Steg kann auch aus Schalenelementen aufgebaut werden. Es ergeben
+sich die gleichen Probleme bei der Bemessung wie beim exzentrischen
+Stab. Es werden Schalenelemente verwendet, die im Unterschied zu
+Plattenelementen Spannungen und damit Kräfte in Elementebene (Platten-
+und Scheibenanteile) abbilden können.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/3b62988b1ee7.webp"/></p>
+<p>Abbildung 2‑53: Schalenmodell für einen Plattenbalken.</p>
+<p>Auch aus diesem Modell können die Längsspannungen im Flansch des
+Plattenbalkens dargestellt werden. Eine direkte Balkenbemessung und
+alleine die Ermittlung eines Stabmomentes für den Plattenbalken lässt
+sich hieraus nicht ableiten.</p>
+<p><strong>Modell 3 – 2D-Modell mit Plattenbalken und mittragender
+Breite</strong></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/82a3d8f78435.webp"/></p>
+<p>Abbildung 2‑54: Standardmodell für den Plattenbalken im 2D-Modell</p>
+<p>Bei in Platten liegenden Stäben und Stabzügen mit mitwirkenden
+Querschnittsbreiten ist in der Regel eine 2D Plattenberechnung
+ausreichend und wünschenswert. Bei einer Plattenberechnung werden keine
+Normalkräfte in der Platte oder im Unterzug ermittelt! Der Vorteil ist,
+dass die Platte vor allem für die Querkraftnachweise einfach (d.h. ohne
+Normalkraftbeeinflussung) bemessen werden kann. Außerdem können die
+ermittelten Stabmomente direkt mit dem richtigen
+Plattenbalkenquerschnitt bemessen werden.</p>
+<p>Hieraus können aber nicht direkt die Normalspannungen analog zu den
+zwei vorhergehenden Modellen in der Druckzone mit Verteilung in
+Querrichtung ermittelt werden. Hierzu sei zur Vertiefung auf die
+ergänzenden Vorlesungen zur FEM verwiesen.</p>
+<p>Weiterführende Erläuterungen gibt es unter anderem unter:</p>
+<p><a href="https://www.youtube.com/watch?v=GoT1f0aGdgs">https://www.youtube.com/watch?v=GoT1f0aGdgs</a></p>
+<section class="level5" id="ergebnisse-der-fem">
+<h5>Ergebnisse der FEM</h5>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/869fe648eaec.webp"/></p>
+<p>Abbildung 2‑55: Ermittlung der mittragenden Breite aus den Spannungen
+im Druckgurt des Plattenbalkens</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/be8d30117979.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ff01b28fecb0.webp"/></p>
+<p>Abbildung 2‑56: Ergebnisse Modell 1 – Verteilung der Druckkräfte in
+Querrichtung bei Max M und resultierende Druckkraft integriert</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/1f143add260b.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/3e219b68fe5e.webp"/></p>
+<p>Abbildung 2‑57: Ergebnisse Modell 2 – Verteilung der Druckkräfte in
+Querrichtung bei Max M und resultierende Druckkraft integriert</p>
+<p>Ermittlung der mitwirkenden Breite aus den Ergebnissen</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><p>Aus Modell 1:</p>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msubsup><mo>∫</mo><mrow></mrow><mrow></mrow></msubsup><msub><mi>σ</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi></mrow><msub><mi>σ</mi><mrow><mi>x</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mfrac><mo>=</mo><mspace width="0.222em"></mspace><mfrac><mrow><msubsup><mo>∫</mo><mrow></mrow><mrow></mrow></msubsup><msub><mi>f</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi></mrow><msub><mi>f</mi><mrow><mi>x</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mfrac><mo>=</mo><mspace width="0.222em"></mspace><msub><mi>b</mi><mrow><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\frac{\int_{}^{}\sigma_{x}dx}{\sigma_{x,max}} = \ \frac{\int_{}^{}f_{x}dx}{f_{x,max}} = \ b_{eff}</annotation></semantics></math>
+= 788 kN / 194 kN/m = <strong>4,06 m</strong></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑83)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><p>Aus Modell 2:</p>
+<blockquote>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msubsup><mo>∫</mo><mrow></mrow><mrow></mrow></msubsup><msub><mi>σ</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi></mrow><msub><mi>σ</mi><mrow><mi>x</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mfrac><mo>=</mo><mspace width="0.222em"></mspace><mfrac><mrow><msubsup><mo>∫</mo><mrow></mrow><mrow></mrow></msubsup><msub><mi>f</mi><mi>x</mi></msub><mi>d</mi><mi>x</mi></mrow><msub><mi>f</mi><mrow><mi>x</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mfrac><mo>=</mo><msub><mi>b</mi><mrow><mi>e</mi><mi>f</mi><mi>f</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\frac{\int_{}^{}\sigma_{x}dx}{\sigma_{x,max}} = \ \frac{\int_{}^{}f_{x}dx}{f_{x,max}} = b_{eff}</annotation></semantics></math>
+= 901 kN / 219 kN/m = <strong>4,11 m</strong></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑84)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Aus der Betrachtung nach EC2 ergab sich vorhergehend eine mitwirkende
+Breite von</p>
+<p><strong><em>b</em><sub>eff</sub> = 4,12 m</strong></p>
+</section>
+</section>
+<section class="level4">
+<h4>Biegebemessung Nulllinie in der Platte</h4>
+<ul>
+<li><p>Breite der Druckzone ist konstant</p></li>
+<li><p>Anwendung bekannter Bemessungstafeln für Rechteckquerschnitte
+möglich (ω oder k<sub>d</sub>-Verfahren)</p></li>
+<li><p>Verwendung von <em>b</em><sub>eff</sub> als Breite
+<em>b</em></p></li>
+<li><p>Überprüfung während der Bemessung, ob Dehnungs-Nulllinie
+tatsächlich in der Platte liegt.</p></li>
+</ul>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><em>x</em> = ξ∙<em>d</em> ≤ <em>h</em><sub>f</sub></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑85)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="level4">
+<h4>Biegebemessung Nulllinie im Steg</h4>
+<ul>
+<li><p>Breite der Druckzone ist veränderlich (verspringt)</p></li>
+<li><p>Anwendung separater Tabellenverfahren (vgl. SBT, S.
+5.166)</p></li>
+<li><p>Anwendung Tafeln über Querschnittsverhältnisse
+<em>b</em><sub>f</sub>/<em>b</em><sub>w</sub> und
+<em>d</em>/<em>h</em><sub>f</sub></p></li>
+</ul>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><ul>
+<li><blockquote>
+<p>Es ist sicherzustellen, dass in Plattenmitte für Normalbeton die
+Dehnung nicht größer als <em>ε</em><sub>c2</sub> = -2‰ wird.</p>
+</blockquote></li>
+</ul></td>
+<td class="sk-glnr">(2‑86)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="level4">
+<h4>Fachwerkmodell für den Gurtanschluss</h4>
+<p>Beim Plattenbalken wird das Biegemoment beim Lastabtrag in ein
+Kräftepaar aufgeteilt, welches im einfachen Fall ohne Druckbewehrung aus
+der integrierten Druckspannung im Druckgurt und der Zugkraft in der
+Biegezugbewehrung besteht.</p>
+<p>Damit Bauteile mit Plattenbalkenquerschnitt als Gesamtquerschnitt
+betrachtet werden können, müssen die abliegenden Plattenabschnitte
+schubfest mit dem Steg verbunden sein. Diese schubfeste Verbindung
+erfordert die Übertragung von Schubkräften (Anteile der Biegedruckkraft)
+längs der Verbindungsfuge zwischen Steg und abliegendem
+Plattenabschnitt. Die Verbindungsstelle zwischen Balkensteg und Gurt
+muss daher für die Übertragung dieser Beanspruchungen nachgewiesen
+werden. Bildet die Platte den Druckgurt des Querschnitts, sind dies
+Druckkraftanteile, die in den abliegenden Plattenabschnitt ausgelagert
+werden. In einem Zuggurt, also in einem Bereich negativer Momente,
+entstehen nur Beanspruchungen, wenn ein Teil der Biegezugbewehrung in
+die Platte ausgelagert wird.</p>
+<p>Zur Abbildung dieses Lastabtrages wird ein Fachwerkmodell
+verwendet.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ebdee72ddf86.webp"/></p>
+<p>Abbildung 2‑58: 3-dimensionales Fachwerk für den Lastabtrag beim
+Plattenbalken</p>
+<p>Es ergibt sich ein 3-dimensionales Fachwerk, welches sich analog zum
+Lastabtrag für Querkräfte aus Druckstreben (Beton) und Zugstreben
+(Bewehrungsstahl) zusammensetzt.</p>
+<p>Die übertragenen Schubkräfte breiten sich gleichmäßig bis auf die
+<strong>effektive Plattenbreite</strong> in die Flansche aus und
+erzeugen so Zugkräfte, die rechtwinklig zur Bauteilachse verlaufen.</p>
+<p>Es muss daher gegebenenfalls eine Anschlussbewehrung zur Aufnahme
+dieser Schubkräfte angeordnet werden.</p>
+<p>Sie wird quer in den Flansch eingelegt und in der Regel gleichmäßig
+auf die obere und untere Seite des Flansches verteilt. Die
+Bemessungsschubkraft wird über eine Länge Δ<em>x</em> ermittelt. Bei
+gleichmäßig belasteten Trägern sollte Δ<em>x</em> nicht länger als der
+halbe Abstand zwischen Momentenmaximum und Momentennullpunkt angenommen
+werden. In diesem Bereich wird davon ausgegangen, dass die Querkraft
+annähernd konstant verläuft und das Biegemoment linear veränderlich
+ist.</p>
+</section>
+<section class="level4">
+<h4>Anschluss von Druckgurten</h4>
+<p>Aus M/z ergeben sich die Druck- und Zugkräfte in Druck- und Zugzone.
+Die Kräfte, die über die Druckstreben im Flansch abgetragen werden,
+ergeben sich aus der Änderung des Biegemomentes über die betrachtete
+Länge Δ<em>x</em> (ΔM/z).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9c51e42e0e48.webp"/></p>
+<p>Abbildung 2‑59: Fachwerkmodell und Schnittgrößen bei
+Gleichstreckenlasten</p>
+<p>Die <strong>Schubspannungen</strong> im Anschnitt zwischen Flansch
+und Steg ergeben sich zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mspace width="0.333em"></mspace><mo>=</mo><mspace width="0.333em"></mspace><mi>Δ</mi><msub><mi>F</mi><mi>d</mi></msub><mi>/</mi><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>h</mi><mi>f</mi></msub><mo>⋅</mo><mi>Δ</mi><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">v_{Ed}\mspace{6mu} = \mspace{6mu}\Delta F_{d}/(h_{f} \cdot \Delta x)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑87)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die <strong>Gesamtkraft</strong> über den betrachteten Abschnitt
+ergibt sich zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>S</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>a</mi><mi>n</mi><mi>s</mi><mi>c</mi><mi>h</mi><mi>l</mi><mi>u</mi><mi>s</mi><mi>s</mi></mrow></msub><mo>=</mo><mi>Δ</mi><msub><mi>F</mi><mi>d</mi></msub><mo>≈</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><mi>z</mi></mfrac><mo>⋅</mo><mfrac><msub><mi>A</mi><mrow><mi>c</mi><mi>a</mi></mrow></msub><msub><mi>A</mi><mrow><mi>c</mi><mi>c</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">V_{Ed,Steganschluss} = \Delta F_{d} \approx \frac{\Delta M_{Ed}}{z} \cdot \frac{A_{ca}}{A_{cc}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑88)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Im Fall von auftretenden Einzellasten sollte die Strecke
+Δ<em>x</em>daher nicht über die Querkraftsprünge hinausgehen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/4cc1d7071cf3.webp"/></p>
+<p>Abbildung 2‑60: Schnittgrößen und Abschnittslängen bei Systemen unter
+Einzellasten</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ff2400d2b924.webp"/></p>
+<p>Abbildung 2‑61: Fachwerkmodell nach EC2</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/0450870e15db.webp"/></p>
+<p>Abbildung 2‑62: Rissbild und Vergleich mit den Haupt- Druck- und
+Zugspannungen im Plattenbalken; Quelle: Brücken- und Ingenieurbau Heft B
+162</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/d4e1cdaaa986.webp"/></p>
+<p>Abbildung 2‑63: 3D-Fachwerkmodell</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/e1ac12e7e8df.webp"/></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/59823bf4fbce.webp"/></p>
+<p>Abbildung 2‑64: Verlauf der linear-elastischen Hauptspannungen im
+Plattenbalken unter Gleichlast</p>
+<p>Die erforderliche Querbewehrung ergibt sich aus den vorhergehenden
+Betrachtungen zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>A</mi><mrow><mi>s</mi><mi>f</mi></mrow></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mi>/</mi><msub><mi>s</mi><mi>f</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>≥</mo><mfrac><mrow><msub><mi>v</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>h</mi><mi>f</mi></msub></mrow><mrow><mo>cot</mo><msub><mi>θ</mi><mi>f</mi></msub></mrow></mfrac><mspace width="0.333em"></mspace><mspace width="0.333em"></mspace><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mi>d</mi></msub></mrow><mrow><mi>Δ</mi><mi>x</mi><mo>⋅</mo><mo>cot</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">(A_{sf} \cdot f_{yd}/s_{f}) \geq \frac{v_{Ed} \cdot h_{f}}{\cot\theta_{f}}\mspace{6mu}\mspace{6mu}\mspace{6mu}\mspace{6mu} = \frac{\Delta F_{d}}{\Delta x \cdot \cot\theta}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑89)</td>
+</tr>
+</tbody>
+</table></div>
+<p>In Zuggurten darf cot<em>θ</em> = 1,0 Druckstreben unter 45°</p>
+<p>In Druckgurten darf cot<em>θ</em> = 1,2 (40°) angenommen werden</p>
+<p>Der Druckstrebenwinkel kann wie beim Querkraftmodell auch genauer
+ermittelt werden (siehe nachfolgend)</p>
+<p>Der Nachweis der Druckstreben als
+<strong>Druckstrebenspannung</strong> erfolgt nach:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>ν<sub>Rd,max</sub> = ν ∙ <em>f</em><sub>cd</sub> ∙
+sin<em>θ</em><sub>f</sub> ∙ cos<em>θ</em><sub>f</sub></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑90)</td>
+</tr>
+</tbody>
+</table></div>
+<p>als <strong>Druckstrebenkraft</strong>:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><em>V</em><sub>Rd,max</sub> = ν ∙ <em>f</em><sub>cd</sub> ∙
+<em>h</em><sub>f</sub> ∙ Δ<em>x</em> ∙ sin<em>θ</em><sub>f</sub> ∙
+cos<em>θ</em><sub>f</sub></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑91)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><em>V</em><sub>Rd,max</sub> = ν ∙ <em>f</em><sub>cd</sub> ∙
+<em>h</em><sub>f</sub> ∙ Δ<em>x</em> ∙ (cot<em>θ</em><sub>f</sub> +
+cotα) sin²<em>θ</em><sub>f</sub></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑92)</td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>6</mn><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>−</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow></msub><mi>/</mi><mn>250</mn><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">v = 0,6 \cdot (1,0 - f_{ck}/250)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑93)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mit dem Druckstrebenwinkel:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cot</mo><mi>θ</mi><mo>=</mo><mfrac><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>+</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo>⋅</mo><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mi>/</mi><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>−</mo><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>c</mi></mrow></msub><mi>/</mi><mi>Δ</mi><msub><mi>F</mi><mi>d</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\cot\theta = \frac{(1,2 + 1,4 \cdot \sigma_{cd}/f_{cd})}{(1 - V_{Rd,cc}/\Delta F_{d})}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑94)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mit</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>c</mi></mrow></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">[</mo><mn>0</mn><mo>,</mo><mn>24</mn><mo>⋅</mo><msubsup><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow></msubsup><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>−</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mfrac><msub><mi>σ</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">)</mo></mrow><mo form="postfix" stretchy="true">]</mo></mrow><mo>⋅</mo><msub><mi>h</mi><mi>f</mi></msub><mo>⋅</mo><mi>Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">V_{Rd,cc} = \left\lbrack 0,24 \cdot f_{ck}^{1/3} \cdot (1 - 1,2 \cdot \left( \frac{\sigma_{cd}}{f_{cd}} \right)) \right\rbrack \cdot h_{f} \cdot \Delta x</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑95)</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Hinweis:</strong> In Druckgurten führt es zu einer deutlichen
+Minderung der erforderlichen Anschlussbewehrung, wenn der
+Druckstrebenwinkel genau ermittelt wird und nicht mit der Vereinfachung
+gerechnet wird.</p>
+</section>
+<section class="level4">
+<h4>Anschluss von Zuggurten</h4>
+<p>Zum Beispiel im Bereich von Stützungen ergeben sich negative
+Biegemomente für den Plattenbalken. Hierdurch liegt die Zugzone im
+Bereich der Flansche. Die Zugkräfte im seitlichen Flansch ergeben sich
+über den Anteil der in den Flansch ausgelagerten Bewehrung.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/01857c95cc60.webp"/></p>
+<p>Abbildung 2‑65: Rissbilder zu verschiedenen Bewehrungsanordnungen im
+Zugflansch</p>
+<p>Wichtig in diesem Zusammenhang ist, dass es nicht sinnvoll ist, auf
+eine Auslagerung der Zugbewehrung in den Flansch zu verzichten. In
+Abbildung 2‑65 sind die Rissbilder für verschiedene
+Bewehrungsanordnungen im Zugflansch eines Plattenbalkens dargestellt. Es
+zeigt sich, dass sich bei Verzicht auf eine Auslagerung ein Rissbild mit
+einzelnen großen Rissen in der Zugzone einstellt.</p>
+<p>Bei der Bewehrung mit ausgelagerten Stäben im Zugbereich ergibt sich
+ein gleichmäßig verteiltes Rissbild mit kleinen Rissbreiten, welches
+anzustreben ist.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9facb087a2ce.webp"/>Die
+anzuschließende Zugkraft im Zuggurt ergibt sich zu:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>=</mo><mi>Δ</mi><msub><mi>F</mi><mrow><mi>s</mi><mi>d</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>M</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub></mrow><mi>z</mi></mfrac><mo>⋅</mo><mfrac><msub><mi>A</mi><mrow><mi>s</mi><mo>,</mo><mi>b</mi><mi>e</mi><mi>f</mi><mi>f</mi><mo>,</mo><mi>i</mi></mrow></msub><msub><mi>A</mi><mrow><mi>s</mi><mo>,</mo><mi>g</mi><mi>e</mi><mi>s</mi></mrow></msub></mfrac></mrow><annotation encoding="application/x-tex">V_{Ed} = \Delta F_{sd} = \frac{\Delta M_{Ed}}{z} \cdot \frac{A_{s,beff,i}}{A_{s,ges}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑96)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Die Bemessung erfolgt analog zum Druckgurt:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>A</mi><mrow><mi>s</mi><mi>f</mi></mrow></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mi>/</mi><msub><mi>s</mi><mi>f</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>≥</mo><mfrac><mrow><msub><mi>v</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>h</mi><mi>f</mi></msub></mrow><mrow><mo>cot</mo><msub><mi>θ</mi><mi>f</mi></msub></mrow></mfrac><mspace width="0.333em"></mspace><mspace width="0.333em"></mspace><mo>=</mo><mfrac><mrow><mi>Δ</mi><msub><mi>F</mi><mi>d</mi></msub></mrow><mrow><mi>Δ</mi><mi>x</mi><mo>⋅</mo><mo>cot</mo><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">(A_{sf} \cdot f_{yd}/s_{f}) \geq \frac{v_{Ed} \cdot h_{f}}{\cot\theta_{f}}\mspace{6mu}\mspace{6mu}\mspace{6mu}\mspace{6mu} = \frac{\Delta F_{d}}{\Delta x \cdot \cot\theta}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑97)</td>
+</tr>
+</tbody>
+</table></div>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9adea48e6e48.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/eac636acf65a.webp"/></p>
+<p>Abbildung 2‑66: Anordnung von Zugbewehrung bei negativem Moment im
+Vergleich</p>
+<p>Bei kombinierter Beanspruchung durch Querbiegung und durch
+Schubkräfte zwischen Steg und Gurt ist in der Regel der größere
+erforderliche Stahlquerschnitt anzuordnen (EC2, 6.2.4 (5))</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/ee5bd4c22947.webp"/></p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>A</mi><mrow><mi>s</mi><mi>f</mi></mrow></msub><mtext mathvariant="normal">/</mtext><mspace width="0.222em"></mspace><msub><mi>s</mi><mi>f</mi></msub><mo>≥</mo><mspace width="0.222em"></mspace><msub><mi>a</mi><mi>s</mi></msub><mo>,</mo><mi>P</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">0,5 \cdot \ A_{sf}\text{/}\ s_{f} \geq \ a_{s},Platte</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑98)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mspace width="0.222em"></mspace><msub><mi>A</mi><mrow><mi>s</mi><mi>f</mi></mrow></msub><mtext mathvariant="normal">/</mtext><mspace width="0.222em"></mspace><mi>s</mi><mi>_</mi><mi>f</mi><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">0,5 \cdot \ A_{sf}\text{/}\ s\_ f\ </annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑99)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Zusammenfassung zum Vorgehen bei der Bemessung der Gurtanschlüsse bei
+Plattenbalken:</p>
+<ul>
+<li><p>Bemessungsschnittkräfte bestimmen</p></li>
+<li><p>Momentenmaxima + Momentennullpunkte bestimmen</p></li>
+<li><p>Δ<em>x</em> und Δ<em>F</em><sub>d</sub> aus Momentenverlauf
+bestimmen</p></li>
+<li><p><em>A</em><sub>sf</sub>/<em>s</em><sub>f</sub> bestimmen
+Bewehrung wählen</p></li>
+</ul>
+</section>
+<section class="level4">
+<h4><img alt="Abbildung" loading="lazy" src="skript/media/a3f29eaffbf9.webp"/>Arbeitsfugen in
+Plattenbalken</h4>
+<p>Sofern Unterzug und Platte (Decke) in einem Zug betoniert werden,
+entsteht ein monolithisches Bauteil, welches für die obigen Berechnungen
+vorausgesetzt wird.</p>
+<p>In vielen Fällen werden zunächst die Unterzüge bis UK Decke
+vorbetoniert. Es entsteht eine Arbeitsfuge/Schubfuge zwischen Unterzug
+und Decke.</p>
+<p>Der Nachweis der Arbeitsfuge erfolgt über folgende Gleichung:</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><em>ν</em><sub>Edi</sub> ≤ <em>ν</em><sub>Rdi</sub></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑100)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>ν</em><sub>Edi</sub>: Einwirkende Schubkraft je Fläche</p>
+<p><em>ν</em><sub>Rdi</sub>: Widerstand je Fläche</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>Mit der aufzunehmenden Längsschubkraft (ν<sub>Edi</sub>):</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ν</mi><mrow><mi>E</mi><mi>d</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>=</mo><mfrac><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi><mo>,</mo><mi>i</mi></mrow></msub><msub><mi>F</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub></mfrac><mo>⋅</mo><mfrac><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><mrow><mi>z</mi><mo>⋅</mo><msub><mi>b</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nu_{Ed,i} = \frac{F_{cd,i}}{F_{cd}} \cdot \frac{V_{Ed}}{z \cdot b_{i}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑101)</td>
+</tr>
+</tbody>
+</table></div>
+<p>mit: <em>F</em><sub>cd</sub> Betondruckkraft (=
+M<sub>Ed/z</sub>)<br/>
+<em>F</em><sub>cd,i</sub> Betondruckkraft im<br/>
+nachträglich betonierten Teil<br/>
+<em>V</em><sub>Ed</sub> Querkraft<br/>
+<em>z</em> Hebelarm der inneren Kräfte<br/>
+<em>b</em><sub>i</sub> Fugenbreite<br/>
+bei Teilfertigteildecken:<br/>
+Verringerung der Breite (<em>b</em><sub>i</sub>) der<br/>
+Schubfuge (siehe Abbildung)</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td>Widerstand der Schubfuge (<em>ν</em><sub>Rdi</sub>):</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi></mrow></msub><mo>=</mo><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>+</mo><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>≤</mo><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\nu_{Rdi} = \nu_{Rdi,c} + \nu_{Rdi,s} \leq \nu_{Rdi,max}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑102)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>ν</em><sub>Rdi,c</sub>: Traglastanteil der unbewehrten
+Schubfuge</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>c</mi></mrow></msub><mo>=</mo><mi>c</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub><mo>+</mo><mi>μ</mi><mo>⋅</mo><msub><mi>σ</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\nu_{Rdi,c} = c \cdot f_{ctd} + \mu \cdot \sigma_{n}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑103)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>ν</em><sub>Rdi,s</sub>: Traglastanteil der Bewehrung in der
+Schubfuge</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ν</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>A</mi><mi>s</mi></msub><mi>/</mi><msub><mi>A</mi><mi>i</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mi>μ</mi><mo>⋅</mo><mo>sin</mo><mi>α</mi><mo>+</mo><mo>cos</mo><mi>α</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\nu_{Rdi,s} = \left( A_{s}/A_{i} \right) \cdot f_{yd} \cdot (1,2\mu \cdot \sin\alpha + \cos\alpha)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑104)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>ν</em><sub>Rdi,max</sub>: Maximale Tragfähigkeit der
+Schubfuge</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>R</mi><mi>d</mi><mi>i</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><mi>v</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mspace width="0.222em"></mspace></mrow><annotation encoding="application/x-tex">v_{Rdi,max} = 0,5 \cdot v \cdot f_{cd}\ </annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑105)</td>
+</tr>
+<tr class="even">
+<td>mit:</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ν</mi><mspace width="0.222em"></mspace><mo>=</mo><mspace width="0.222em"></mspace><mn>0</mn><mo>,</mo><mn>6</mn><mspace width="0.222em"></mspace><mo>∖</mo><mi>c</mi><mi>d</mi><mi>o</mi><mi>t</mi><mspace width="0.222em"></mspace><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mspace width="0.222em"></mspace><mo>−</mo><mfrac><msub><mi>f</mi><mrow><mi>c</mi><mi>k</mi></mrow></msub><mn>250</mn></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mrow><mo form="prefix" stretchy="true">(</mo><mi>f</mi><mi>_</mi><mi>c</mi><mi>k</mi><mspace width="0.222em"></mspace><mi>i</mi><mi>n</mi><mspace width="0.222em"></mspace><mo form="prefix" stretchy="false">[</mo><mi>N</mi><mi>/</mi><mi>m</mi><mi>m</mi><mi>²</mi><mo form="postfix" stretchy="false">]</mo><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">\nu\  = \ 0,6\ \backslash cdot\ \left( 1\  - \frac{f_{ck}}{250} \right)(f\_ ck\ in\ \lbrack N/mm²\rbrack)</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑106)</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>c, μ</em> Beiwerte abhängig von Rauigkeit<br/>
+<em>f</em><sub>cd</sub>; <em>f</em><sub>ctd</sub> Bemessungswert Druck-
+bzw. Zugfestigkeit Beton<br/>
+<em>f</em><sub>yd</sub>; α Streckgrenze bzw. Neigung der Bewehrung<br/>
+σ<sub>n</sub> Spannung aus äußerer Normalkraft senkr. zu Fuge<br/>
+<em>A</em><sub>s</sub>; <em>A</em><sub>i</sub> Fläche der Bewehrung bzw.
+Gesamtfläche der Fuge</p>
+<p>Rauigkeiten werden eingeteilt in:</p>
+<ul>
+<li><p><img alt="Abbildung" loading="lazy" src="skript/media/de7912603857.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/3c15f67fc252.webp"/><strong>sehr glatt:</strong>
+Oberflächen gegen Stahl, etc. oder mit fließfähigem Beton
+erstellt</p></li>
+<li><p><strong>glatt:</strong> unbehandelte Betonoberflächen</p></li>
+<li><p><strong>rau:</strong> Betonoberfläche „gehakt“</p></li>
+<li><p><img alt="Abbildung" loading="lazy" src="skript/media/672a0b673893.webp"/><strong>verzahnt:</strong>
+Verzahnung gemäß:</p></li>
+</ul>
+<p>Bei biegebeanspruchten Bauteilen darf die Fugenverbundbewehrung wie
+nachfolgend abgebildet abgestuft werden</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/fe2ccf79b20d.webp"/></p>
+<p>Abbildung 2‑67: Traganteile in der Arbeitsfuge und mögliche
+Staffelung der Fugenverbundbewehrung</p>
+<div class="sk-tab"><table class="sk-formel">
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mspace width="0.222em"></mspace><mo>⋅</mo><msub><mi>f</mi><mrow><mi>y</mi><mi>d</mi></mrow></msub><mo>⋅</mo><mo form="prefix" stretchy="false">(</mo><mi>μ</mi><mo>sin</mo><mrow><mi>α</mi><mo>+</mo><mo>cos</mo><mrow><mi>α</mi><mo form="postfix" stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\rho\  \cdot f_{yd} \cdot (\mu\sin{\alpha + \cos{\alpha)}}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑107)</td>
+</tr>
+<tr class="even">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>t</mi><mi>d</mi></mrow></msub><mo>+</mo><mi>μ</mi><mo>⋅</mo><msub><mi>σ</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">c \cdot f_{ctd} + \mu \cdot \sigma_{n}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td class="sk-glnr">(2‑108)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+</section>
+<section class="level3" id="s-2-7-4">
+<h3><span class="sk-nr">2.7.4</span> Bügelformen und Abstände</h3>
+<section class="level4">
+<h4>Höchstabstände der Querkraftbewehrung</h4>
+<p>Tabelle 2‑3: Höchstabstände der Querkraftbewehrung</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/161908f135e2.webp"/></p>
+<p>Arten von Querkraftbewehrung</p>
+<p>Querkraftbewehrung kann aus einer Kombination folgender
+Bewehrungsarten bestehen:</p>
+<ul>
+<li><p>Bügel, die die Längsbewehrung und die Betondruckzone
+umfassen</p></li>
+<li><p>Schrägstäbe</p></li>
+<li><p>Schubzulagen, z.B. Körbe, Leitern, etc., die die Längsbewehrung
+nicht umfassen, aber ausreichend im Zug- und Druckbereich verankert
+sind</p></li>
+</ul>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/8e254f58f250.webp"/></p>
+<p>Abbildung 2‑68: Arten von Querkraftbewehrung</p>
+<p>Mindestens 50% der Querkraftbewehrung sind als Bügel auszuführen.<img alt="Abbildung" loading="lazy" src="skript/media/eb5ab721f35d.webp"/></p>
+<p>Abbildung 2‑69: Übliche Bügelformen</p>
+</section>
+<section class="level4">
+<h4><img alt="Abbildung" loading="lazy" src="skript/media/a6fd8c2b1925.webp"/>Die Verankerung von Bügeln
+und Querkraftbewehrung </h4>
+<p>Die Verankerung von Bügeln und Querkraftbewehrung erfolgt durch:</p>
+<p>• Haken (a)</p>
+<p>• Winkelhaken (b)</p>
+<p>• aufgeschweißte Querstäbe (c, d)</p>
+<p>Innerhalb eines (Winkel-)Hakens ist in der Regel ein Querstab
+einzulegen.</p>
+<p>In der Druckzone erfolgt die Verankerung (nach a) bzw. b)) zwischen
+dem Schwerpunkt der Druckzonenfläche und dem Druckrand; bei
+Querbewehrung über die ganze Höhe gilt diese Bedingung als erfüllt.</p>
+<p>In der Zugzone erfolgt die Anordnung der Verankerungselemente
+möglichst nahe am Zugrand. Bügel müssen die Biegezugbewehrung
+umschließen.</p>
+<p>Bei Balken sind die Bügel wie folgt zu schließen:</p>
+<p>• Druckzone: nach Bild e) und f) • Zugzone: nach Bild g) und h)</p>
+<p>Bei Plattenbalken erfolgt das Schließen der Bügel mit Querbewehrung
+nach Bild i). Zur Vermeidung von Betonabplatzungen ist dabei die
+Querkraft <em>V</em><sub>Ed</sub> zu begrenzen auf
+<em>V</em><sub>Ed</sub> ≤ 2/3  <em>V</em><sub>Rd,max</sub> (NCI Zu
+8.5)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/07f5d34ff5d9.webp"/></p>
+<p>Abbildung 2‑71: Ausführung der Bügelbewehrung in Abhängigkeit der
+Beanspruchung im Bereich der Bügelschlösser</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/80f96a731039.webp"/></p>
+<p>Abbildung 2‑72:Schließen von Bügeln und Verankerung</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/50236441e38c.webp"/></p>
+<p>Abbildung 2‑73: Übliche Bügelformen zweischnittiger Bügel bei
+Rechteck- und Plattenbalkenquerschnitten (V<sub>a</sub> oder
+V<sub>b</sub>: Verankerungselemente, l<sub>s</sub>:
+Übergreifungslänge)</p>
+<p>Die Bügel bilden zusammen mit der Längsbewehrung ein räumliches
+Fachwerk; zwischen den Bügelschenkeln bilden sich Druckbögen aus
+(Abbildung 2‑74). Daher sind neben den Längsabständen auch die
+Querabstände der Bügelschenkel zu begrenzen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/08b0f9a47d04.webp"/></p>
+<p>Abbildung 2‑74: Räumliches Fachwerkmodell – Druckbogen</p>
+</section>
+</section>
+</section>
+</section>

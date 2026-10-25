@@ -1,0 +1,407 @@
+<section class="level1" id="s-8">
+<h1><span class="sk-nr">8</span> Diskontinuitätsbereiche</h1>
+<p>Der Schnittgrößenermittlung und Bemessung von Stahlbetontragwerken
+liegt in der Regel die Bernoulli-Hypothese zugrunde, also eine lineare
+Dehnungsverteilung über die Querschnittshöhe. Bereiche, in denen diese
+Annahme ausreichend genau zutrifft, werden als B-Bereiche bezeichnet.
+Bei elastischem Werkstoffverhalten lassen sich die Spannungen dort mit
+den Gleichungen der technischen Biegelehre bestimmen:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mi>M</mi><mi>I</mi></mfrac><mo>⋅</mo><mi>z</mi><mspace width="1.0em"></mspace><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mo>⋅</mo><mi>S</mi></mrow><mrow><mi>I</mi><mo>⋅</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma = \frac{M}{I} \cdot z\quad\quad\tau = \frac{V \cdot S}{I \cdot b}</annotation></semantics></math>
+(8‑26)</p>
+<p>B-Bereiche können mit den Standardverfahren bemessen werden.
+Stabwerkmodelle sind hierfür nicht erforderlich, werden aber teilweise
+als Randbedingung für angrenzende D-Bereiche benötigt.</p>
+<p>In Diskontinuitätsbereichen (D-Bereichen) stellt sich dagegen eine
+ausgeprägt nichtlineare Dehnungsverteilung ein. Ursache ist entweder</p>
+<ul>
+<li><p>eine geometrische Diskontinuität, d. h. eine Unstetigkeit der
+Tragwerksform (Querschnittssprünge wie ausgeklinkte Trägerenden, Knicke,
+Rahmenecken, Konsolen, Öffnungen und Aussparungen) oder</p></li>
+<li><p>eine statische Diskontinuität, d. h. die Einleitung
+konzentrierter Kräfte (Einzellasten, Auflagerkräfte,
+Spanngliedverankerungen)</p></li>
+</ul>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/56fd73bd14c7.webp"/></p>
+<p>Abbildung 8‑1: Diskontinuitätsbereiche</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/2eda049d185c.webp"/></p>
+<p>Abbildung 8‑2: Geometrische und statische Diskontinuitäten</p>
+<p>D-Bereiche sind in der Regel auf Teile eines Bauteils begrenzt. Bei
+Scheiben und wandartigen Trägern kann jedoch das gesamte Bauteil einen
+D-Bereich darstellen.</p>
+<p>Die Bemessung und konstruktive Durchbildung von D-Bereichen erfolgt
+mit Stabwerkmodellen, die den Kraftfluss durch ein möglichst statisch
+bestimmtes Fachwerk aus Druck- und Zugstreben idealisieren.
+Stabwerkmodelle werden angewendet für:</p>
+<ul>
+<li><p>Wände und wandartige Träger</p></li>
+<li><p>Konsolen, ausgeklinkte Auflager, Querschnittssprünge, Rahmenecken
+und Öffnungen in Bauteilen</p></li>
+<li><p>Lasteinleitungsbereiche, insbesondere
+Spannkrafteinleitungsbereiche</p></li>
+</ul>
+<p>Für jeden D-Bereich eines Tragwerks muss ein eigenes Stabwerkmodell
+entwickelt werden. Aufgabe des Konstrukteurs ist es, Diskontinuitäten zu
+erkennen und den Kraftfluss mit einem passenden Modell zu beschreiben.
+In der Praxis treten gerade in D-Bereichen häufig Schäden auf, weil die
+Effekte nicht erkannt werden und klar definierte Bemessungskonzepte
+meist fehlen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/e1e4f2fecea7.webp"/></p>
+<p>Abbildung 8‑3: Risse an geometrischen Diskontinuitäten</p>
+<p>Die Bemessung mit Stabwerkmodellen beruht auf dem 1. Grenzwertsatz
+der Plastizitätstheorie (statischer bzw. unterer Grenzwertsatz):</p>
+<p><em>Ein Tragwerk aus plastisch verformbarem Werkstoff versagt nicht,
+wenn zu einer gegebenen Belastung irgendeine Spannungsverteilung
+existiert, die den Gleichgewichtsbedingungen genügt und nirgends die
+Fließgrenze des Werkstoffes überschreitet.</em></p>
+<p>Die Verträglichkeitsbedingungen bleiben dabei unberücksichtigt,
+obwohl sich die Zugstäbe deutlich stärker verformen als die
+Druckstäbe.</p>
+<p><strong>Vorteile der Stabwerkmethode:</strong></p>
+<ul>
+<li><p>macht den Kraftfluss anschaulich sichtbar</p></li>
+<li><p>durchgängiges, einheitliches Bemessungskonzept</p></li>
+<li><p>auch in Diskontinuitätsbereichen anwendbar</p></li>
+<li><p>Bewehrungsführung folgt dem Kraftfluss</p></li>
+<li><p>für massive Bauteile geeignet</p></li>
+</ul>
+<p><strong>Nachteile der Stabwerkmethode:</strong></p>
+<ul>
+<li><p>liefert keine Aussagen zum Gebrauchszustand</p></li>
+<li><p>Superposition ist weitgehend nicht zulässig</p></li>
+<li><p>das Aufstellen des Modells setzt Erfahrung voraus</p></li>
+<li><p>das Modell muss iterativ festgelegt werden</p></li>
+<li><p>nichtlineare Berechnungen sind kaum möglich</p></li>
+<li><p>Bemessung und Konstruktion lassen sich nicht trennen</p></li>
+<li><p>für die EDV-gestützte Berechnung wenig geeignet</p></li>
+</ul>
+<p>Die Bestimmung der Stabwerkmodelle und ihre Bemessung werden im
+Folgenden erläutert.</p>
+<section class="level2" id="s-8-1">
+<h2><span class="sk-nr">8.1</span> Stabwerkmodelle für D-Bereiche</h2>
+<p>Das folgende Vorgehen zeigt den Ablauf einer ingenieurmäßigen
+Vorgehensweise bei der Behandlung von D-Bereichen:</p>
+<p>1. Festlegung der Geometrie, Belastung und Auflagerbedingungen</p>
+<p>2. Gliederung des räumlichen Tragwerks in verschiedene Ebenen, damit
+getrennte Untersuchungen mittels ebener Stabwerkmodelle möglich
+sind.</p>
+<p>3. Ermitteln der Auflagerkräfte am statischen Ersatzsystem.</p>
+<p>4. Unterteilung des Tragwerkes in B- und D-Bereiche.</p>
+<p>5. Ermittlung der Schnittgrößen der B-Bereiche und Bemessung nach
+Standardverfahren (oder mit Hilfe von Stabwerkmodellen).</p>
+<p>6. Festlegung der Belastungen und Randbedingungen für die
+D-Bereiche.</p>
+<p>7. Bemessung der D-Bereiche mittels Stabwerkmodell. Die Zugkräfte
+müssen durch Bewehrungsstäbe aufgenommen werden.</p>
+<p>8. Überprüfen des Gleichgewichtes der D-Bereiche.</p>
+</section>
+<section class="level2" id="s-8-2">
+<h2><span class="sk-nr">8.2</span> Typische Stabwerkmodelle für B-Bereiche</h2>
+<p>Die Stabwerkmethode ist kein neues Verfahren. Die Bemessung eines
+Balkens für Querkraft (Mörsch’sche Fachwerkanalogie 1902) und Torsion
+basiert bereits auf Stabwerkmodellen. Hieraus wurde auch das derzeit
+gültige Stabwerkmodell für die Querkraftbemessung entwickelt.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/7672661431d0.webp"/></p>
+<p>Abbildung 8‑4: Stabwerkmodell für die Querkraftbemessung mit
+variablen Druck- und Zugstreben</p>
+<section class="level3" id="s-8-2-1">
+<h3><span class="sk-nr">8.2.1</span> Querkraftmodell</h3>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/b4f620060430.webp"/></p>
+<p>Abbildung 8‑5: Stabwerkmodell für die Querkraftbemessung mit
+senkrechten Zugstreben (Bügel)</p>
+<p>Die wesentlichen Bestandteile des Modells sind:</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/88278ed3d54b.webp"/></p>
+</section>
+<section class="level3" id="s-8-2-2">
+<h3><span class="sk-nr">8.2.2</span> Durchbrüche in Trägern</h3>
+<p>Häufig müssen Durchbrüche oder Öffnungen in Trägern oder Scheiben
+vorgesehen werden (z.B. für Haustechnik oder Fenster). Diese haben zur
+Folge, dass an diesen Stellen Störungen im Kraftfluss entstehen.</p>
+<p>Zwischen den Diagonaldruckstreben und den Gurtstreben lassen sich
+Aussparungen bei nicht allzu hoher Ausnutzung des Querschnitts
+problemlos unterbringen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/8a5eba5fa359.webp"/></p>
+<p>Abbildung 8‑6: Kleine Öffnungen in einem Träger; Quelle: König, Gert
+(et al.)</p>
+<p>Komplexere Modelle sind notwendig, wenn die Öffnungen an ungünstigen
+Stellen angeordnet sind oder durch ihre Größe den Kraftfluss zu stark
+verändern bzw. einengen. Die Öffnung sollte dann möglichst in der
+Zugzone angeordnet werden, um die Druckzone des Trägers nicht unnötig zu
+verkleinern.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/2996af635eba.webp"/></p>
+<p>Abbildung 8‑7: Große Öffnung in einem Träger; Quelle: König, Gert (et
+al.)</p>
+</section>
+</section>
+<section class="level2" id="s-8-3">
+<h2><span class="sk-nr">8.3</span> Konsole</h2>
+<p>Konsolen sind Kragträger mit einer Kraglänge <em>a</em><sub>c</sub> ≤
+<em>h</em><sub>c</sub>. Da der Dehnungsverlauf an der Einspannstelle
+nicht mehr geradlinig ist, gilt die Biegetheorie nicht, und die
+Bemessung erfolgt mit Stabwerkmodellen. Dabei werden die Bereiche der
+Hauptzug- und Hauptdruckspannungen zu geraden Stäben zusammengefasst.
+Die Zugkräfte sind durch Bewehrung aufzunehmen, die Krafteinleitungs-
+und Kraftumlenkungsbereiche zusätzlich auf Druckfestigkeit
+nachzuweisen.</p>
+<p>Belastet wird die Konsole durch die Auflagerreaktion
+<em>F</em><sub>Ed</sub> des aufgelagerten Balkens und eine
+Horizontalkraft <em>H</em><sub>Ed</sub> infolge Reibung. Sofern keine
+besonderen Vorkehrungen getroffen sind, ist diese mit
+<em>H</em><sub>Ed</sub> ≈ 0,2·<em>F</em><sub>Ed</sub> anzusetzen.</p>
+<p>Das Grundmodell besteht aus einem Zugband an der Konsolenoberseite
+und einer geneigten Druckstrebe zum Stützenanschnitt (Abbildung 8‑8).
+Der Beton unterhalb der Druckstrebe ist für den Lastabtrag nicht
+erforderlich.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/754de99a68b0.webp"/></p>
+<p>Abbildung 8‑8: Konsole</p>
+<p>Abhängig vom Verhältnis <em>a</em><sub>c</sub>/<em>h</em><sub>c</sub>
+ergeben sich unterschiedliche Stabwerkmodelle und Bewehrungsanordnungen
+(Abbildung 8‑9).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/9dfb9ef58b7d.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/a4bbf674ef0b.webp"/></p>
+<p>Abbildung 8‑9: Stabwerkmodelle für Konsolen und zugehörige
+Bewehrungsanordnung; Quelle: König, Gert (et al.), Grundlagen des
+Stahlbetonbaus</p>
+<p>Je nach Lage der Konsole und Art der Lasteinleitung sind weitere
+Modelle möglich (Abbildung 8‑10 bis Abbildung 8‑13).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a39541cc884f.webp"/></p>
+<p>Abbildung 8‑10: Konsole mit Abstützung nach unten (im oberen Bereich
+keine Zugspannungen)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/98036ea399f9.webp"/></p>
+<p>Abbildung 8‑11: Angehängte Konsole</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/572f080fcc19.webp"/></p>
+<p>Abbildung 8‑12: Kombiniertes Stabwerkmodell</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/eeb86183ee93.webp"/></p>
+<p>Abbildung 8‑13: Bewehrungsführung mit Horizontalbügeln bzw. mit
+Schrägstäben (nach EC2, Bild 5.18)</p>
+<section class="level3" id="s-8-3-1">
+<h3><span class="sk-nr">8.3.1</span> Bemessung</h3>
+<p>Nachfolgend soll lediglich der prinzipielle Rechengang dargestellt
+werden.</p>
+<ul>
+<li><p>Querkraftnachweis (Nachweis der Druckstrebe):
+<em>V</em><sub>Ed</sub> ≤ <em>V</em><sub>Rd,max</sub></p></li>
+<li><p>Nachweis der Zuggurtkraft aus dem Stabwerkmodell:
+<em>F</em><sub>td</sub> =
+<em>F</em><sub>v,d</sub>·<em>a</em><sub>c</sub>/<em>z</em><sub>0</sub> +
+<em>H</em><sub>c,d</sub>·(<em>a</em><sub>H</sub> +
+<em>z</em><sub>0</sub>)/<em>z</em><sub>0</sub> mit
+<em>a</em><sub>c</sub>/<em>z</em><sub>0</sub> ≥ 0,4</p></li>
+<li><p>Druckspannungsnachweis im unteren Knoten: nicht erforderlich,
+falls <em>z</em><sub>0</sub> = <em>d</em>·(1 –
+0,4·<em>V</em><sub>Ed</sub>/<em>V</em><sub>Rd,max</sub>)</p></li>
+<li><p>Betonpressung unter dem Lager nach EC2, 6.7
+(Teilflächenbelastung), siehe Abschnitt Teilflächenpressung</p></li>
+<li><p>Nachweis der Verankerung des Zuggurtes</p></li>
+</ul>
+<p><strong>Weiterleitung der Konsolenkräfte –
+Bewehrungsanordnung:</strong> für <em>a</em><sub>c</sub> ≤
+0,5<em>h</em><sub>c</sub> und <em>V</em><sub>Ed</sub> &gt;
+0,3·<em>V</em><sub>Rd,max</sub> sind <strong>geschlossene
+horizontale</strong> oder geneigte Bügel mit einem Gesamtquerschnitt von
+mindestens 50 % der Zuggurtbewehrung anzuordnen; für
+<em>a</em><sub>c</sub> &gt; 0,5<em>h</em><sub>c</sub> und
+<em>F</em><sub>td</sub> &gt; 0,3·<em>V</em><sub>Rd,c</sub> sind
+<strong>geschlossene vertikale Bügel</strong> für
+<em>F</em><sub>wd</sub> = 0,7·<em>F</em><sub>td</sub> anzuordnen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a076215bbd40.webp"/></p>
+<p>Abbildung 8‑14: Zweckmäßige Form einer durch eine Einzellast
+belasteten Konsole nach Leonhardt (Leonhardt F.; Mönnig E.: Vorlesungen
+über Massivbau, Teil 2)</p>
+</section>
+</section>
+<section class="level2" id="s-8-4">
+<h2><span class="sk-nr">8.4</span> Ausgeklinktes Trägerende</h2>
+<p>Häufig werden im Hochbau, besonders im Fertigteilbau, Träger im
+Auflagerbereich ausgeklinkt und auf Konsolen aufgelagert. Diese
+Auflagerung ermöglicht eine bündige Unterkante von Träger und Konsole,
+wodurch der Eckbereich Stütze-Träger freigehalten werden kann,
+beispielsweise für Installationstechnik. Die Höhe der Deckenkonstruktion
+kann dadurch minimiert werden.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/cc8057b0265c.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/557ab9b053a8.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/557ab9b053a8.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/f3da72a745fb.webp"/></p>
+<p>Abbildung 8‑15: Rechts: Detail ausgeklinktes Auflager; Quelle: König,
+Gert (et al.), Grundlagen des Stahlbetonbaus; Links: Hauptspannungen aus
+einer FE-Berechnung und Überlagerung mit dem vorgeschlagenen
+Stabwerkmodell</p>
+<p>Für die Bemessung des ausgeklinkten Trägerendes kommen zwei
+grundlegende Stabwerkmodelle in Betracht:</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/a13261b36290.webp"/></p>
+<p>Abbildung 8‑16: Stabwerkmodelle (siehe EC2, Teil 1-3, Bild 2.107)</p>
+<p>Beim Stabwerkmodell A können Risse von der einspringenden Ecke
+ausgehen. Wie bei der Konsole, so ist auch bei ausgeklinkten Trägerenden
+auf eine gute konstruktive Durchbildung zu achten. Bei Modell B kann die
+Verankerung der Schrägstäbe Probleme bereiten. Wie experimentelle
+Untersuchungen gezeigt haben, weist eine Kombination beider
+Stabwerkmodelle die höchste Tragfähigkeit auf. Dabei sollten mindestens
+40 % der vertikalen Auflagerkraft durch Schrägstäbe aufgenommen werden.
+Die Größe der Ausklinkung ergibt sich aus der zulässigen Betonpressung
+und aus der Verankerung der Bewehrung.
+<strong>Bewehrungsführung:</strong> Die Bewehrung besteht aus
+Haarnadeln, Bügeln und Schlaufen. Zur Rissbreitenbegrenzung sind keine
+dicken Stäbe zu verwenden.</p>
+</section>
+<section class="level2" id="s-8-5">
+<h2><span class="sk-nr">8.5</span> Höhenversatz</h2>
+<p>Das Prinzip der Tragwirkung eines Höhenversatzes in einem Bauteil
+gleicht dem eines durch eine Öffnung geschwächten Balkens. Die
+Abmessungen des D-Bereichs bei dem Versatz sind in Abbildung 8‑17
+dargestellt. Die Trajektorien sind in der Abb. als durchgezogene Linien
+und nicht wie zuvor als Vektoren dargestellt. Für diesen Bereich kann
+durch ein entsprechendes Stabwerkmodell der Kraftfluss sinnvoll
+abgebildet werden.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/0ee97cf01736.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/d76b6b5503a1.webp"/></p>
+<p>Abbildung 8‑17: Links: Hauptspannungstrajektorien für einen
+Höhenversatz; Quelle: König, Gert (et al.), Grundlagen des
+Stahlbetonbaus, Rechts: Hauptspannungstrajektorien aus einer
+linear-elastischen FE-Berechnung</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/96a2c1f59df3.webp"/></p>
+<p>Abbildung 8‑18: Detail Höhenversatz; Quelle: König, Gert (et al.),
+Grundlagen des Stahlbetonbaus</p>
+</section>
+<section class="level2" id="s-8-6">
+<h2><span class="sk-nr">8.6</span> Rahmenecken</h2>
+<p>Rahmenecken sind Diskontinuitätsbereiche, in denen sich die Richtung
+der Stabachse ändert, sodass die inneren Zug- und Druckkräfte umgelenkt
+werden müssen. Sie treten nicht nur an der Verbindung von Stütze und
+Riegel auf, sondern überall dort, wo biegebeanspruchte Bauteile
+abgewinkelt aneinanderstoßen, etwa am Firstknick von Dachbindern, am
+Übergang von Treppenlauf zu Podest oder am Fuß von Winkelstützwänden
+(Abbildung 8‑19). Für das Tragverhalten und die Bewehrungsführung ist
+das Vorzeichen des Moments entscheidend. Man unterscheidet Rahmenecken
+mit negativem Moment (schließend, Zug an der Außenseite) und mit
+positivem Moment (öffnend, Zug an der Innenseite).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/857c7b6ff7e8.webp"/></p>
+<p>Abbildung 8‑19<em>: Beispiele für Rahmenecken</em></p>
+<p>Bei der Bemessung und Konstruktion sind zu beachten:</p>
+<ul>
+<li><p>Abweichungen der Bewehrung von der Richtung der
+Hauptzugkraft</p></li>
+<li><p>Umlenkkräfte der Bewehrung (Biegerollendurchmesser)</p></li>
+<li><p>hohe Bewehrungsgehalte</p></li>
+<li><p>das Bemessungsmoment ist in der Regel das Anschnittsmoment; bei
+dicken Bauteilen sind ggf. genauere Berechnungen erforderlich</p></li>
+</ul>
+<p>Schwierig ist bei der Bewehrungsführung die Betonierfuge am
+Stützenkopf, da lange oder gebogene Anschlussstäbe für den Riegel das
+Betonieren behindern. Die Tragfähigkeit einer Rahmenecke hängt
+wesentlich von der einwandfreien Bauausführung (Verbundeigenschaften)
+und von der Bewehrungsführung ab (Einhaltung der zulässigen
+Biegerollendurchmesser, Randabstände, Zulagebewehrung), vgl. Abbildung
+8‑24.</p>
+<p><strong>Beachte:</strong> Die Rissbreitenbegrenzung über die
+Begrenzung der Stababstände bzw. der Stahlspannungen nach EC2 ist im
+Bereich der Rahmenecke nicht anwendbar.</p>
+<section class="level3" id="s-8-6-1">
+<h3><span class="sk-nr">8.6.1</span> Rahmenecken mit negativem Moment</h3>
+<p>Bei Rahmenecken mit <strong>negativem</strong> Moment liegt die
+einspringende Ecke im Druckbereich, und die Zugbewehrung wird außen um
+die Ecke herumgeführt. Die dabei entstehenden Umlenkkräfte erzeugen
+Querzugspannungen im Beton, die durch Bewehrung abzudecken sind. Um die
+Betondruckspannungen zu begrenzen, empfiehlt es sich, die einspringende
+Ecke abzuschrägen oder auszurunden. Für den Biegerollendurchmesser sind
+nach EC2, Tab. 8.1DE Werte zwischen 10<em>d</em><sub>s</sub> und
+20<em>d</em><sub>s</sub> zu wählen.</p>
+<p>Tabelle 8‑1: Mindestwerte der Biegerollendurchmesser für gekrümmte
+Stäbe (EC2, Tab. 8.1DE)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/45fddeea380d.webp"/></p>
+<p>Der Beiwert <em>α</em><sub>A</sub> = 0,7 darf bei der Ermittlung der
+Übergreifungslänge nur angesetzt werden, wenn Winkelhaken angeordnet
+werden.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/7299fc520a6d.webp"/></p>
+<p>Abbildung 8‑20: Bewehrungsführung in Rahmenecken mit negativem
+Moment</p>
+</section>
+<section class="level3" id="s-8-6-2">
+<h3><span class="sk-nr">8.6.2</span> Rahmenecken mit positivem Moment (innen Zug)</h3>
+<p>Wie experimentelle Untersuchungen gezeigt haben, hängt die
+Grenztragfähigkeit von Rahmenecken mit positivem Moment wesentlich von
+der Bewehrungsführung ab.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/115cd624ed40.webp"/></p>
+<p>Abbildung 8‑21: Wirkungsgrad der verschiedenen Bewehrungsführungen in
+Rahmenecken nach Versuchen (DAfStb, Heft 354)</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/e2c01a75b6fa.webp"/></p>
+<p>Abbildung 8‑22: Tragfähigkeit von Rahmenecken abhängig von der
+Bewehrungsführung</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/98661d5098da.webp"/></p>
+<p>Abbildung 8‑23: Bewehrungsführung in Rahmenecken mit positivem
+Moment</p>
+<p>Wird die Bewehrung nach Abbildung 8‑23 ausgeführt, so ist kein
+Nachweis der Verankerungslängen erforderlich.</p>
+<p>Erforderliche Schrägbewehrung:</p>
+<p><em>μ</em><sub>Eds</sub> &lt; 0,4 %: Schrägbewehrung nicht
+erforderlich</p>
+<p>0,4 % ≤ <em>μ</em><sub>Eds</sub> ≤ 1,0 %: Schrägbewehrung für
+<em>A</em><sub>s</sub>/2 (<em>A</em><sub>s</sub> = max.
+Biegebewehrung)</p>
+<p><em>μ</em><sub>Eds</sub> &gt; 1,0 %: Schrägbewehrung für
+<em>A</em><sub>s</sub></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/3c19a4928b26.webp"/></p>
+<p>Abbildung 8‑24: Stabwerkmodell (a) und Bewehrungsführung (b, c) in
+Rahmenecken mit positivem Moment</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/1cf554531ea4.webp"/></p>
+<p>Abbildung 8‑25: Stabwerkmodell und Bewehrungsführung in Rahmenecken
+mit positivem Moment</p>
+</section>
+<section class="level3" id="s-8-6-3">
+<h3><span class="sk-nr">8.6.3</span> Anschluss von Riegeln an durchlaufende Stützen</h3>
+<p>Schließt ein Riegel an eine durchlaufende Stütze an, teilt sich das
+Riegelmoment auf den oberen und den unteren Stützenabschnitt auf. Da die
+Stützenmomente ober- und unterhalb des Knotens entgegengesetzte
+Vorzeichen haben, wechselt die Druckzone der Stütze die
+Querschnittsseite, und im Knoten bildet sich eine geneigte Druckstrebe
+aus. Die Riegelzugbewehrung wird mit ausreichend großem
+Biegerollendurchmesser in die Stütze abgebogen und dort verankert
+(Abbildung 8‑26).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/edc1d6635c55.webp"/></p>
+<p>Abbildung 8‑26: Kraftfluss in einer Rahmenecke</p>
+</section>
+</section>
+<section class="level2" id="s-8-7">
+<h2><span class="sk-nr">8.7</span> Träger mit geneigter Stabachse</h2>
+<p>Bei Trägern mit geknickter oder gebogener Stabachse ändern die
+Gurtkräfte ihre Richtung und erzeugen Umlenkkräfte quer zur Stabachse.
+An einem Knick ergibt sich die Umlenkkraft aus dem Krafteck der beiden
+Gurtkräfte, bei gekrümmter Bewehrung wirkt sie als Linienlast <em>u</em>
+= <em>F</em><sub>s</sub>/<em>r</em>. Sind die Umlenkkräfte zur
+Bauteiloberfläche hingerichtet, müssen sie durch Bügel in die Druckzone
+zurückgehängt werden, da die Bewehrung sonst die Betondeckung absprengt.
+Alternativ werden die Stäbe am Knick gekreuzt und jeweils gerade in der
+Druckzone verankert (Abbildung 8‑27).</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/3f7ca9e002fb.webp"/></p>
+<p>Abbildung 8‑27: Bewehrungsführung in Trägern mit geknickter
+Stabachse</p>
+<p>Bei Trägern mit veränderlicher Höhe liegt die maßgebende Stelle für
+die Biegebewehrung nicht zwingend am Ort des größten Moments, weil sich
+mit der Querschnittshöhe auch der innere Hebelarm ändert. Beim
+gevouteten Balken in Abbildung 8‑28 ist die größte Bewehrung deshalb
+nicht in Feldmitte erforderlich, sondern bei <em>x</em> ≈ 6,5 m.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/83a580252796.webp"/></p>
+<p>Abbildung 8‑28: Biegemomentenverlauf sowie erforderliche Bewehrung
+für einen gevouteten Balken</p>
+</section>
+<section class="level2" id="s-8-8">
+<h2><span class="sk-nr">8.8</span> Teilflächenpressung</h2>
+<p>Wenn Beton in mehreren Richtungen gleichzeitig einem Druck ausgesetzt
+wird, ergibt sich ein mehraxialer Spannungszustand. Wenn ein Betonwürfel
+von allen Seiten gleichmäßig belastet wird, steigt seine Druckfestigkeit
+auf das Drei- bis Vierfache der Druckfestigkeit bei einseitiger
+Belastung (hydrostatischer Spannungszustand). Diese Eigenschaft des
+Betons wird auch bei der Belastung von Teilflächen genutzt. Der
+umgebende Beton erzeugt eine passive Umschnürung, die die Querdehnung
+behindert und somit deutlich höhere Druckfestigkeiten ermöglicht. Diese
+Betrachtung ist insbesondere bei der Einleitung hoher Auflagerkräfte
+oder konzentrierter Einzellasten notwendig.</p>
+<p>Die Erhöhung der Festigkeit infolge der behinderten Querdehnung bei
+einer Teilflächenbelastung darf nach folgender Formel berücksichtigt
+werden.</p>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>R</mi><mi>d</mi><mi>u</mi></mrow></msub><mo>=</mo><msub><mi>A</mi><mrow><mi>c</mi><mn>0</mn></mrow></msub><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msqrt><mfrac><msub><mi>A</mi><mrow><mi>c</mi><mn>1</mn></mrow></msub><msub><mi>A</mi><mrow><mi>c</mi><mn>0</mn></mrow></msub></mfrac></msqrt><mo>≤</mo><mn>3</mn><mo>,</mo><mn>0</mn><mo>⋅</mo><msub><mi>f</mi><mrow><mi>c</mi><mi>d</mi></mrow></msub><mo>⋅</mo><msub><mi>A</mi><mrow><mi>c</mi><mn>0</mn></mrow></msub></mrow><annotation encoding="application/x-tex">F_{Rdu} = A_{c0} \cdot f_{cd} \cdot \sqrt{\frac{A_{c1}}{A_{c0}}} \leq 3,0 \cdot f_{cd} \cdot A_{c0}</annotation></semantics></math></span></p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/072716f39453.webp"/></p>
+<p>Abbildung 8‑29: Ermittlung der Teilflächen</p>
+<p>Um die Lastausbreitung auf maximal 30° zu begrenzen, müssen die
+Bedingungen <em>h</em> ≥ <em>b</em><sub>2</sub> - <em>b</em><sub>1</sub>
+und <em>h</em> ≥ <em>d</em><sub>2</sub> - <em>d</em><sub>1</sub>
+eingehalten werden.</p>
+<p>Zur Aufnahme von Spaltzugkräften ist eine Zusatzbewehrung im
+Lasteinleitungsbereich vorzusehen.</p>
+<p><img alt="Abbildung" loading="lazy" src="skript/media/e982445f8291.webp"/></p>
+<p>Abbildung 8‑30: Spaltzugkräfte im Auflagerbereich</p>
+</section>
+</section>
