@@ -6,8 +6,17 @@ Dehnungsverteilung über die Querschnittshöhe. Bereiche, in denen diese
 Annahme ausreichend genau zutrifft, werden als B-Bereiche bezeichnet.
 Bei elastischem Werkstoffverhalten lassen sich die Spannungen dort mit
 den Gleichungen der technischen Biegelehre bestimmen:</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mi>M</mi><mi>I</mi></mfrac><mo>⋅</mo><mi>z</mi><mspace width="1.0em"></mspace><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mo>⋅</mo><mi>S</mi></mrow><mrow><mi>I</mi><mo>⋅</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma = \frac{M}{I} \cdot z\quad\quad\tau = \frac{V \cdot S}{I \cdot b}</annotation></semantics></math>
-(8‑26)</p>
+<div class="sk-tab"><table>
+
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p><span class="sk-mathe"><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mi>M</mi><mi>I</mi></mfrac><mo>⋅</mo><mi>z</mi><mspace width="1.0em"></mspace><mspace width="1.0em"></mspace><mi>τ</mi><mo>=</mo><mfrac><mrow><mi>V</mi><mo>⋅</mo><mi>S</mi></mrow><mrow><mi>I</mi><mo>⋅</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sigma = \frac{M}{I} \cdot z\quad\quad\tau = \frac{V \cdot S}{I \cdot b}</annotation></semantics></math></span></p>
+</blockquote></td>
+<td>(8.1)</td>
+</tr>
+</tbody>
+</table></div>
 <p>B-Bereiche können mit den Standardverfahren bemessen werden.
 Stabwerkmodelle sind hierfür nicht erforderlich, werden aber teilweise
 als Randbedingung für angrenzende D-Bereiche benötigt.</p>
@@ -134,26 +143,34 @@ al.)</p>
 </section>
 <section class="level2" id="s-8-3">
 <h2><span class="sk-nr">8.3</span> Konsole</h2>
-<p>Konsolen sind Kragträger mit einer Kraglänge <em>a</em><sub>c</sub> ≤
-<em>h</em><sub>c</sub>. Da der Dehnungsverlauf an der Einspannstelle
-nicht mehr geradlinig ist, gilt die Biegetheorie nicht, und die
-Bemessung erfolgt mit Stabwerkmodellen. Dabei werden die Bereiche der
-Hauptzug- und Hauptdruckspannungen zu geraden Stäben zusammengefasst.
-Die Zugkräfte sind durch Bewehrung aufzunehmen, die Krafteinleitungs-
-und Kraftumlenkungsbereiche zusätzlich auf Druckfestigkeit
-nachzuweisen.</p>
+<p>Konsolen sind Kragträger mit einer Kraglänge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>
+≤
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>c</mi></msub><annotation encoding="application/x-tex">h_{c}</annotation></semantics></math>.
+Da der Dehnungsverlauf an der Einspannstelle nicht mehr geradlinig ist,
+gilt die Biegetheorie nicht, und die Bemessung erfolgt mit
+Stabwerkmodellen. Dabei werden die Bereiche der Hauptzug- und
+Hauptdruckspannungen zu geraden Stäben zusammengefasst. Die Zugkräfte
+sind durch Bewehrung aufzunehmen, die Krafteinleitungs- und
+Kraftumlenkungsbereiche zusätzlich auf Druckfestigkeit nachzuweisen.</p>
 <p>Belastet wird die Konsole durch die Auflagerreaktion
-<em>F</em><sub>Ed</sub> des aufgelagerten Balkens und eine
-Horizontalkraft <em>H</em><sub>Ed</sub> infolge Reibung. Sofern keine
-besonderen Vorkehrungen getroffen sind, ist diese mit
-<em>H</em><sub>Ed</sub> ≈ 0,2·<em>F</em><sub>Ed</sub> anzusetzen.</p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{Ed}</annotation></semantics></math>
+des aufgelagerten Balkens und eine Horizontalkraft
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">H_{Ed}</annotation></semantics></math>
+infolge Reibung. Sofern keine besonderen Vorkehrungen getroffen sind,
+ist diese mit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">H_{Ed}</annotation></semantics></math>
+≈
+0,2·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{Ed}</annotation></semantics></math>
+anzusetzen.</p>
 <p>Das Grundmodell besteht aus einem Zugband an der Konsolenoberseite
 und einer geneigten Druckstrebe zum Stützenanschnitt (Abbildung 8‑8).
 Der Beton unterhalb der Druckstrebe ist für den Lastabtrag nicht
 erforderlich.</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/754de99a68b0.webp"/></p>
 <p>Abbildung 8‑8: Konsole</p>
-<p>Abhängig vom Verhältnis <em>a</em><sub>c</sub>/<em>h</em><sub>c</sub>
+<p>Abhängig vom Verhältnis
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>c</mi></msub><annotation encoding="application/x-tex">h_{c}</annotation></semantics></math>
 ergeben sich unterschiedliche Stabwerkmodelle und Bewehrungsanordnungen
 (Abbildung 8‑9).</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/9dfb9ef58b7d.webp"/><img alt="Abbildung" loading="lazy" src="skript/media/a4bbf674ef0b.webp"/></p>
@@ -178,30 +195,53 @@ Schrägstäben (nach EC2, Bild 5.18)</p>
 werden.</p>
 <ul>
 <li><p>Querkraftnachweis (Nachweis der Druckstrebe):
-<em>V</em><sub>Ed</sub> ≤ <em>V</em><sub>Rd,max</sub></p></li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">V_{Ed}</annotation></semantics></math>
+≤
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">V_{Rd,max}</annotation></semantics></math></p></li>
 <li><p>Nachweis der Zuggurtkraft aus dem Stabwerkmodell:
-<em>F</em><sub>td</sub> =
-<em>F</em><sub>v,d</sub>·<em>a</em><sub>c</sub>/<em>z</em><sub>0</sub> +
-<em>H</em><sub>c,d</sub>·(<em>a</em><sub>H</sub> +
-<em>z</em><sub>0</sub>)/<em>z</em><sub>0</sub> mit
-<em>a</em><sub>c</sub>/<em>z</em><sub>0</sub> ≥ 0,4</p></li>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{td}</annotation></semantics></math>
+=
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>v</mi><mo>,</mo><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{v,d}</annotation></semantics></math>·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_{0}</annotation></semantics></math>
++
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>c</mi><mo>,</mo><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">H_{c,d}</annotation></semantics></math>·(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>H</mi></msub><annotation encoding="application/x-tex">a_{H}</annotation></semantics></math>
++
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_{0}</annotation></semantics></math>)/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_{0}</annotation></semantics></math>
+mit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_{0}</annotation></semantics></math>
+≥ 0,4</p></li>
 <li><p>Druckspannungsnachweis im unteren Knoten: nicht erforderlich,
-falls <em>z</em><sub>0</sub> = <em>d</em>·(1 –
-0,4·<em>V</em><sub>Ed</sub>/<em>V</em><sub>Rd,max</sub>)</p></li>
+falls
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_{0}</annotation></semantics></math>
+= <em>d</em>·(1 –
+0,4·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">V_{Ed}</annotation></semantics></math>/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">V_{Rd,max}</annotation></semantics></math>)</p></li>
 <li><p>Betonpressung unter dem Lager nach EC2, 6.7
 (Teilflächenbelastung), siehe Abschnitt Teilflächenpressung</p></li>
 <li><p>Nachweis der Verankerung des Zuggurtes</p></li>
 </ul>
 <p><strong>Weiterleitung der Konsolenkräfte –
-Bewehrungsanordnung:</strong> für <em>a</em><sub>c</sub> ≤
-0,5<em>h</em><sub>c</sub> und <em>V</em><sub>Ed</sub> &gt;
-0,3·<em>V</em><sub>Rd,max</sub> sind <strong>geschlossene
-horizontale</strong> oder geneigte Bügel mit einem Gesamtquerschnitt von
-mindestens 50 % der Zuggurtbewehrung anzuordnen; für
-<em>a</em><sub>c</sub> &gt; 0,5<em>h</em><sub>c</sub> und
-<em>F</em><sub>td</sub> &gt; 0,3·<em>V</em><sub>Rd,c</sub> sind
-<strong>geschlossene vertikale Bügel</strong> für
-<em>F</em><sub>wd</sub> = 0,7·<em>F</em><sub>td</sub> anzuordnen.</p>
+Bewehrungsanordnung:</strong> für
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>
+≤
+0,5<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>c</mi></msub><annotation encoding="application/x-tex">h_{c}</annotation></semantics></math>
+und
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>E</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">V_{Ed}</annotation></semantics></math>
+&gt;
+0,3·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">V_{Rd,max}</annotation></semantics></math>
+sind <strong>geschlossene horizontale</strong> oder geneigte Bügel mit
+einem Gesamtquerschnitt von mindestens 50 % der Zuggurtbewehrung
+anzuordnen; für
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>c</mi></msub><annotation encoding="application/x-tex">a_{c}</annotation></semantics></math>
+&gt;
+0,5<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>h</mi><mi>c</mi></msub><annotation encoding="application/x-tex">h_{c}</annotation></semantics></math>
+und
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{td}</annotation></semantics></math>
+&gt;
+0,3·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>R</mi><mi>d</mi><mo>,</mo><mi>c</mi></mrow></msub><annotation encoding="application/x-tex">V_{Rd,c}</annotation></semantics></math>
+sind <strong>geschlossene vertikale Bügel</strong> für
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>w</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{wd}</annotation></semantics></math>
+=
+0,7·<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>t</mi><mi>d</mi></mrow></msub><annotation encoding="application/x-tex">F_{td}</annotation></semantics></math>
+anzuordnen.</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/a076215bbd40.webp"/></p>
 <p>Abbildung 8‑14: Zweckmäßige Form einer durch eine Einzellast
 belasteten Konsole nach Leonhardt (Leonhardt F.; Mönnig E.: Vorlesungen
@@ -269,7 +309,7 @@ das Vorzeichen des Moments entscheidend. Man unterscheidet Rahmenecken
 mit negativem Moment (schließend, Zug an der Außenseite) und mit
 positivem Moment (öffnend, Zug an der Innenseite).</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/857c7b6ff7e8.webp"/></p>
-<p>Abbildung 8‑19<em>: Beispiele für Rahmenecken</em></p>
+<p>Abbildung 8‑19: Beispiele für Rahmenecken</p>
 <p>Bei der Bemessung und Konstruktion sind zu beachten:</p>
 <ul>
 <li><p>Abweichungen der Bewehrung von der Richtung der
@@ -297,14 +337,18 @@ die Ecke herumgeführt. Die dabei entstehenden Umlenkkräfte erzeugen
 Querzugspannungen im Beton, die durch Bewehrung abzudecken sind. Um die
 Betondruckspannungen zu begrenzen, empfiehlt es sich, die einspringende
 Ecke abzuschrägen oder auszurunden. Für den Biegerollendurchmesser sind
-nach EC2, Tab. 8.1DE Werte zwischen 10<em>d</em><sub>s</sub> und
-20<em>d</em><sub>s</sub> zu wählen.</p>
+nach EC2, Tab. 8.1DE Werte zwischen
+10<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mi>s</mi></msub><annotation encoding="application/x-tex">d_{s}</annotation></semantics></math>
+und
+20<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mi>s</mi></msub><annotation encoding="application/x-tex">d_{s}</annotation></semantics></math>
+zu wählen.</p>
 <p>Tabelle 8‑1: Mindestwerte der Biegerollendurchmesser für gekrümmte
 Stäbe (EC2, Tab. 8.1DE)</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/45fddeea380d.webp"/></p>
-<p>Der Beiwert <em>α</em><sub>A</sub> = 0,7 darf bei der Ermittlung der
-Übergreifungslänge nur angesetzt werden, wenn Winkelhaken angeordnet
-werden.</p>
+<p>Der Beiwert
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mi>A</mi></msub><annotation encoding="application/x-tex">\alpha_{A}</annotation></semantics></math>
+= 0,7 darf bei der Ermittlung der Übergreifungslänge nur angesetzt
+werden, wenn Winkelhaken angeordnet werden.</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/7299fc520a6d.webp"/></p>
 <p>Abbildung 8‑20: Bewehrungsführung in Rahmenecken mit negativem
 Moment</p>
@@ -326,13 +370,17 @@ Moment</p>
 <p>Wird die Bewehrung nach Abbildung 8‑23 ausgeführt, so ist kein
 Nachweis der Verankerungslängen erforderlich.</p>
 <p>Erforderliche Schrägbewehrung:</p>
-<p><em>μ</em><sub>Eds</sub> &lt; 0,4 %: Schrägbewehrung nicht
-erforderlich</p>
-<p>0,4 % ≤ <em>μ</em><sub>Eds</sub> ≤ 1,0 %: Schrägbewehrung für
-<em>A</em><sub>s</sub>/2 (<em>A</em><sub>s</sub> = max.
-Biegebewehrung)</p>
-<p><em>μ</em><sub>Eds</sub> &gt; 1,0 %: Schrägbewehrung für
-<em>A</em><sub>s</sub></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><annotation encoding="application/x-tex">\mu_{Eds}</annotation></semantics></math>
+&lt; 0,4 %: Schrägbewehrung nicht erforderlich</p>
+<p>0,4 % ≤
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><annotation encoding="application/x-tex">\mu_{Eds}</annotation></semantics></math>
+≤ 1,0 %: Schrägbewehrung für
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>s</mi></msub><annotation encoding="application/x-tex">A_{s}</annotation></semantics></math>/2
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>s</mi></msub><annotation encoding="application/x-tex">A_{s}</annotation></semantics></math>
+= max. Biegebewehrung)</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mrow><mi>E</mi><mi>d</mi><mi>s</mi></mrow></msub><annotation encoding="application/x-tex">\mu_{Eds}</annotation></semantics></math>
+&gt; 1,0 %: Schrägbewehrung für
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>s</mi></msub><annotation encoding="application/x-tex">A_{s}</annotation></semantics></math></p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/3c19a4928b26.webp"/></p>
 <p>Abbildung 8‑24: Stabwerkmodell (a) und Bewehrungsführung (b, c) in
 Rahmenecken mit positivem Moment</p>
@@ -360,11 +408,13 @@ Biegerollendurchmesser in die Stütze abgebogen und dort verankert
 Gurtkräfte ihre Richtung und erzeugen Umlenkkräfte quer zur Stabachse.
 An einem Knick ergibt sich die Umlenkkraft aus dem Krafteck der beiden
 Gurtkräfte, bei gekrümmter Bewehrung wirkt sie als Linienlast <em>u</em>
-= <em>F</em><sub>s</sub>/<em>r</em>. Sind die Umlenkkräfte zur
-Bauteiloberfläche hingerichtet, müssen sie durch Bügel in die Druckzone
-zurückgehängt werden, da die Bewehrung sonst die Betondeckung absprengt.
-Alternativ werden die Stäbe am Knick gekreuzt und jeweils gerade in der
-Druckzone verankert (Abbildung 8‑27).</p>
+=
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>s</mi></msub><annotation encoding="application/x-tex">F_{s}</annotation></semantics></math>/<em>r</em>.
+Sind die Umlenkkräfte zur Bauteiloberfläche hingerichtet, müssen sie
+durch Bügel in die Druckzone zurückgehängt werden, da die Bewehrung
+sonst die Betondeckung absprengt. Alternativ werden die Stäbe am Knick
+gekreuzt und jeweils gerade in der Druckzone verankert (Abbildung
+8‑27).</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/3f7ca9e002fb.webp"/></p>
 <p>Abbildung 8‑27: Bewehrungsführung in Trägern mit geknickter
 Stabachse</p>
@@ -396,8 +446,14 @@ werden.</p>
 <p><img alt="Abbildung" loading="lazy" src="skript/media/072716f39453.webp"/></p>
 <p>Abbildung 8‑29: Ermittlung der Teilflächen</p>
 <p>Um die Lastausbreitung auf maximal 30° zu begrenzen, müssen die
-Bedingungen <em>h</em> ≥ <em>b</em><sub>2</sub> - <em>b</em><sub>1</sub>
-und <em>h</em> ≥ <em>d</em><sub>2</sub> - <em>d</em><sub>1</sub>
+Bedingungen <em>h</em> ≥
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mn>2</mn></msub><annotation encoding="application/x-tex">b_{2}</annotation></semantics></math>
+-
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mn>1</mn></msub><annotation encoding="application/x-tex">b_{1}</annotation></semantics></math>
+und <em>h</em> ≥
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>2</mn></msub><annotation encoding="application/x-tex">d_{2}</annotation></semantics></math>
+-
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>1</mn></msub><annotation encoding="application/x-tex">d_{1}</annotation></semantics></math>
 eingehalten werden.</p>
 <p>Zur Aufnahme von Spaltzugkräften ist eine Zusatzbewehrung im
 Lasteinleitungsbereich vorzusehen.</p>
